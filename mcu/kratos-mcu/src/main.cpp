@@ -1,18 +1,17 @@
 #include <Arduino.h>
-
-// put function declarations here:
-int myFunction(int, int);
+#include <wifiSetup.hpp>
+#include <stdio.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "driver/gpio.h"
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+    gpio_set_direction(GPIO_NUM_2, GPIO_MODE_OUTPUT);
+    wificonn();
+
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-}
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+    
 }
