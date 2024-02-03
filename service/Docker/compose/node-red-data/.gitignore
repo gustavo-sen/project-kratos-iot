@@ -1,6 +1,3 @@
-# Node.js dependencies
-node_modules/
-
 # Node.js debugging
 *.log
 *.pid

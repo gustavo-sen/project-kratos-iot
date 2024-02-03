@@ -427,6 +427,25 @@
             }
         }
     },
+    "node-red-contrib-aedes": {
+        "name": "node-red-contrib-aedes",
+        "version": "0.12.0",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "aedes-mqtt-broker": {
+                "name": "aedes-mqtt-broker",
+                "types": [
+                    "aedes broker"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-aedes",
+                "file": "/data/node_modules/node-red-contrib-aedes/aedes.js"
+            }
+        }
+    },
     "node-red-dashboard": {
         "name": "node-red-dashboard",
         "version": "3.6.2",
@@ -663,25 +682,6 @@
                 "user": false,
                 "module": "node-red-dashboard",
                 "file": "/data/node_modules/node-red-dashboard/nodes/ui_spacer.js"
-            }
-        }
-    },
-    "node-red-contrib-aedes": {
-        "name": "node-red-contrib-aedes",
-        "version": "0.12.0",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "aedes-mqtt-broker": {
-                "name": "aedes-mqtt-broker",
-                "types": [
-                    "aedes broker"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-contrib-aedes",
-                "file": "/data/node_modules/node-red-contrib-aedes/aedes.js"
             }
         }
     }
