@@ -3,3 +3,30 @@
 .vscode/c_cpp_properties.json
 .vscode/launch.json
 .vscode/ipch
+.npm
+
+
+# Node.js dependencies
+node_modules/
+
+# Node.js debugging
+*.log
+*.pid
+*.lock
+
+# Node-RED generated files
+flow.json
+flows_cred.json
+settings.js
+
+# Local files
+/.config.json
+
+# Logs
+/logs/
+
+# Ignore npm package-lock files
+package-lock.json
+
+# Ignore environment configuration
+.env
