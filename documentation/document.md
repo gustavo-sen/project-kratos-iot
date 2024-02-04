@@ -21,4 +21,6 @@
 
 - Microcontrolador ESP-32
 - Relés
-- Fita LED RGB test
+- Fita LED RGB
+- Sensor temperatura
+- Transistor
