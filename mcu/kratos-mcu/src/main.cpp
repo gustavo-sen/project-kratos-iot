@@ -18,6 +18,7 @@ void setup() {
 
 void loop() {
 
+    mqtt_publish("sw","sou burro");
 
-
+    vTaskDelay(3000 / portTICK_RATE_MS);
 }
