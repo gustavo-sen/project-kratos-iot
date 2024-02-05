@@ -13,7 +13,7 @@ void setup() {
 
     wifiConn();
     std::string topicName = "arr";
-    topicSubscribe("carro");
+    topicSubscribe("test");
     topicSubscribe("arr");
 
 }
