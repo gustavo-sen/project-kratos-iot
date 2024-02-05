@@ -8,6 +8,14 @@
         "env": []
     },
     {
+        "id": "c4fad207f982e03f",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "3563d00d68873830",
         "type": "ui_base",
         "theme": {
@@ -175,14 +183,52 @@
         "x": 90,
         "y": 60,
         "wires": [
-            [],
-            []
+            [
+                "47a8920f8d61e96e"
+            ],
+            [
+                "2259fb6cc2ceb022"
+            ]
         ]
+    },
+    {
+        "id": "2259fb6cc2ceb022",
+        "type": "debug",
+        "z": "62947d5f581f77cb",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 300,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "47a8920f8d61e96e",
+        "type": "debug",
+        "z": "62947d5f581f77cb",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 300,
+        "y": 40,
+        "wires": []
     },
     {
         "id": "1a88312ac47edd77",
         "type": "ui_button",
-        "z": "62947d5f581f77cb",
+        "z": "c4fad207f982e03f",
         "name": "",
         "order": 0,
         "width": 0,
@@ -198,8 +244,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 90,
-        "y": 180,
+        "x": 130,
+        "y": 80,
         "wires": [
             []
         ]
@@ -207,7 +253,7 @@
     {
         "id": "389aa80be53d35ed",
         "type": "ui_switch",
-        "z": "62947d5f581f77cb",
+        "z": "c4fad207f982e03f",
         "name": "",
         "label": "switch",
         "tooltip": "",
@@ -230,8 +276,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 90,
-        "y": 260,
+        "x": 130,
+        "y": 160,
         "wires": [
             [
                 "217bc607fec6550f"
@@ -241,7 +287,7 @@
     {
         "id": "217bc607fec6550f",
         "type": "mqtt out",
-        "z": "62947d5f581f77cb",
+        "z": "c4fad207f982e03f",
         "name": "",
         "topic": "sw",
         "qos": "2",
@@ -252,8 +298,8 @@
         "correl": "",
         "expiry": "",
         "broker": "89895e19de20a335",
-        "x": 290,
-        "y": 260,
+        "x": 330,
+        "y": 160,
         "wires": []
     }
 ]

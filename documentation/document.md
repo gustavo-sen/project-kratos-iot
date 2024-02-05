@@ -15,8 +15,6 @@
 - Cadastro RFID
 - Telegram Rerpots
 
-
-
 ## Componentes ultilizados
 
 - Microcontrolador ESP-32

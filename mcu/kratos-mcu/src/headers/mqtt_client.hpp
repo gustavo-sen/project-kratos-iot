@@ -1,7 +1,6 @@
 #pragma once
 
-#include <string>
-
-void topicSubscribe(std::string& topicName);
-void topicUnSubscribe(std::string& topicName);
-void getAllTopics();
+void mqtt_setup();
+void callback(char* topic, byte* message, unsigned int length);
+void mqtt_connect();
+PubSubClient getClient();

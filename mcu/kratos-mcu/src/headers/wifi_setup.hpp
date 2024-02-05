@@ -1,3 +1,4 @@
 #pragma once
 
-void wifiConn();
+void wifiConnect();
+void wifiSetup();
