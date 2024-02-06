@@ -1,23 +1,24 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "driver/gpio.h"
+#include <esp_task_wdt.h>
 
 #include "headers/wifi_setup.hpp"
 #include "headers/fan_controllerl.hpp"
 #include "headers/mqtt_client.hpp"
 
+const int watchdogTimeout = 5;
+
 void setup() {
-    gpio_set_direction(GPIO_NUM_26, GPIO_MODE_OUTPUT);
+    esp_task_wdt_init(watchdogTimeout, true); 
+    esp_task_wdt_add(NULL);
 
     wifiSetup();
-    wifiConnect();
     mqtt_setup();
     
 }
 
 void loop() {
+    esp_task_wdt_reset();
 
-    mqtt_publish("sw","funfou");
-
-    vTaskDelay(3000 / portTICK_RATE_MS);
 }

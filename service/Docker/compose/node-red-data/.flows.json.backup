@@ -213,7 +213,7 @@
         "type": "debug",
         "z": "62947d5f581f77cb",
         "name": "debug 2",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -276,7 +276,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 130,
+        "x": 110,
         "y": 160,
         "wires": [
             [
@@ -298,8 +298,95 @@
         "correl": "",
         "expiry": "",
         "broker": "89895e19de20a335",
-        "x": 330,
+        "x": 350,
         "y": 160,
         "wires": []
+    },
+    {
+        "id": "735f5689e9f838e1",
+        "type": "inject",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "str",
+        "x": 130,
+        "y": 260,
+        "wires": [
+            [
+                "33eee9a40f27fc26"
+            ]
+        ]
+    },
+    {
+        "id": "33eee9a40f27fc26",
+        "type": "mqtt out",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "topic": "home/luz",
+        "qos": "2",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "89895e19de20a335",
+        "x": 360,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "a9f7286c5b429cc1",
+        "type": "ui_toast",
+        "z": "c4fad207f982e03f",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "casa",
+        "name": "Notification",
+        "x": 350,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "c1ebf1a0d06f37b4",
+        "type": "mqtt in",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "topic": "join",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "89895e19de20a335",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 340,
+        "wires": [
+            [
+                "a9f7286c5b429cc1"
+            ]
+        ]
     }
 ]

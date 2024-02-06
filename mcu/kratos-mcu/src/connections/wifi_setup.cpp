@@ -1,3 +1,5 @@
+#include "./headers/wifi_setup.hpp"
+
 #include <WiFi.h>
 #include <SPI.h>
 #include <PubSubClient.h>
@@ -8,6 +10,8 @@ char password[] = "pprKN@Fv";
 
 void wifiSetup(){
     gpio_set_direction(GPIO_NUM_2, GPIO_MODE_OUTPUT);
+
+    wifiConnect();
 }
 
 void wifiConnect(){

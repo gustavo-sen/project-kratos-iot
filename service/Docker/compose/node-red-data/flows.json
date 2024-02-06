@@ -226,29 +226,44 @@
         "wires": []
     },
     {
-        "id": "1a88312ac47edd77",
-        "type": "ui_button",
-        "z": "c4fad207f982e03f",
+        "id": "c1ebf1a0d06f37b4",
+        "type": "mqtt in",
+        "z": "62947d5f581f77cb",
         "name": "",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "button",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 130,
-        "y": 80,
+        "topic": "join",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "89895e19de20a335",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 140,
         "wires": [
-            []
+            [
+                "a9f7286c5b429cc1"
+            ]
         ]
+    },
+    {
+        "id": "a9f7286c5b429cc1",
+        "type": "ui_toast",
+        "z": "62947d5f581f77cb",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "casa",
+        "name": "Notification",
+        "x": 310,
+        "y": 140,
+        "wires": []
     },
     {
         "id": "389aa80be53d35ed",
@@ -276,20 +291,20 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 130,
-        "y": 160,
+        "x": 170,
+        "y": 120,
         "wires": [
             [
-                "217bc607fec6550f"
+                "33eee9a40f27fc26"
             ]
         ]
     },
     {
-        "id": "217bc607fec6550f",
+        "id": "33eee9a40f27fc26",
         "type": "mqtt out",
         "z": "c4fad207f982e03f",
         "name": "",
-        "topic": "sw",
+        "topic": "home/luz",
         "qos": "2",
         "retain": "false",
         "respTopic": "",
@@ -298,8 +313,8 @@
         "correl": "",
         "expiry": "",
         "broker": "89895e19de20a335",
-        "x": 330,
-        "y": 160,
+        "x": 340,
+        "y": 120,
         "wires": []
     }
 ]
