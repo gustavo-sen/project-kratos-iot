@@ -1,4 +1,4 @@
-#include <string>
+#include <string.h>
 #include <stdio.h>
 #include <iostream>
 #include <set>
@@ -8,6 +8,7 @@
 #include <PubSubClient.h>
 
 #include "./headers/mqtt_client.hpp"
+#include "./headers/lamp_controller.hpp"
 
 //MQTT
 const char* MAIN_TOPIC = "home/";
@@ -34,13 +35,12 @@ void client_loop(){
 }
 
 void callback(char* topic, byte* message, unsigned int length) {
-    std::string messageTemp;
+    std::string packageTemp;
 
-    for (int i = 0; i < length; i++) {
-        messageTemp += (char)message[i];
+    for (unsigned int i = 0; i < length; i++) {
+        packageTemp += (char)message[i];
     }
-    std::cout << messageTemp << std::endl;
-
+    
 }
 
 void mqtt_publish(const char* topic, const char* payload){
@@ -55,15 +55,11 @@ void mqtt_subcribe(const char* topic){
     strcpy(topicoCompleto, MAIN_TOPIC);
     
     // Concatena topico em topicoCompleto
-    strcat(topicoCompleto, topic
-    );
+    strcat(topicoCompleto, topic);
     
-    // Assumindo que client.subscribe() aceita uma const char*
     client.subscribe(topicoCompleto);
     
-    // Imprime a mensagem
-    std::cout << "Topico: " << topicoCompleto << " inscrito" << std::endl;
-    
+    std::cout << "inscrito em " << topicoCompleto;
     // Libera a memória alocada
     delete[] topicoCompleto;
 }
@@ -74,7 +70,7 @@ void mqttConnect() {
         std::cout << ("Attempting MQTT connection...\n");
 
         if (client.connect(CLIENT_ID, MQTT_USER, MQTT_PASS)) {
-            std::cout << ("connected\n");
+            std::cout << ("connected") << std::endl;
         } else {
             std::cout << ("Connection failed") << std::endl;
             vTaskDelay(2000 / portTICK_RATE_MS);
