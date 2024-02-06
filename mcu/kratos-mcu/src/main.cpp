@@ -9,16 +9,25 @@
 
 const int watchdogTimeout = 5;
 
+void task_mqtt_callback(void *xTaskParameters);
+
 void setup() {
     esp_task_wdt_init(watchdogTimeout, true); 
     esp_task_wdt_add(NULL);
 
     wifiSetup();
     mqtt_setup();
-    
+    xTaskCreate(task_mqtt_callback, "Task_mqtt_callback", 10000, NULL, 1, NULL);
+
 }
 
 void loop() {
     esp_task_wdt_reset();
+}
 
+void task_mqtt_callback(void *xTaskParameters){
+    while(1){
+        mqttConnect();
+        client_loop();
+    }
 }

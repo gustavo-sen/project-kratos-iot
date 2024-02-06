@@ -31,7 +31,3 @@ void wifiConnect(){
     } while (!WiFi.isConnected());
     
 }
-
-void mqtt_connect(){
-    
-}

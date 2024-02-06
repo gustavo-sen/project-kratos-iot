@@ -32,18 +32,18 @@ void mqtt_setup(){
     client.publish("join", "connection estabilished.");
 }
 
+void client_loop(){
+    client.loop();
+}
+
 void callback(char* topic, byte* message, unsigned int length) {
-    std::cout << "passou callback";
-    std::cout << ("Message arrived on topic: ");
-    std::cout << (topic);
-    std::cout << (". Message: ");
     std::string messageTemp;
 
     for (int i = 0; i < length; i++) {
         std::cout << ((char)message[i]);
         messageTemp += (char)message[i];
     }
-    std::cout << messageTemp;
+    std::cout << messageTemp << std::endl;
     
     // if(String(topic).equals(String(MAIN_TOPIC) + "luz")){
     //     std::string msg = messageTemp;
