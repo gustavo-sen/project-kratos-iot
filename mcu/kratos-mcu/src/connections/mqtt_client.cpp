@@ -10,25 +10,22 @@
 #include "./headers/mqtt_client.hpp"
 
 //MQTT
-
 const char* MAIN_TOPIC = "home/";
 const char* CLIENT_ID = "esp32-client";
 const char* MQTT_USER = "admin";
 const char* MQTT_PASS = "admin";
-const char* mqtt_server = "172.18.9.95";
-const char* mqtt_port = "1883";
+const char* MQTT_SERVER = "172.18.9.95";
+const char* MQTT_PORT = "1883";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
 
 void mqtt_setup(){
-    client.setServer(mqtt_server, 1883);
+    client.setServer(MQTT_SERVER, 1883);
     client.setCallback(callback);
 
-    if(!client.connected()){
-        mqttConnect();
-    }
-    client.subscribe("home/luz");
+    mqttConnect();
+
     client.publish("join", "connection estabilished.");
 }
 
@@ -40,30 +37,10 @@ void callback(char* topic, byte* message, unsigned int length) {
     std::string messageTemp;
 
     for (int i = 0; i < length; i++) {
-        std::cout << ((char)message[i]);
         messageTemp += (char)message[i];
     }
     std::cout << messageTemp << std::endl;
-    
-    // if(String(topic).equals(String(MAIN_TOPIC) + "luz")){
-    //     std::string msg = messageTemp;
 
-    //     if(messageTemp == "true"){
-            
-    //     }
-        
-    // }
-
-
-//   if (String(topic) == "sw") {
-//     std::cout <<("Changing output to ");
-//     if(messageTemp == "on"){
-//       std::cout << ("on");
-//     }
-//     else if(messageTemp == "off"){
-//       std::cout << ("off");
-//     }
-//   }
 }
 
 void mqtt_publish(const char* topic, const char* payload){
@@ -71,16 +48,25 @@ void mqtt_publish(const char* topic, const char* payload){
 }
 
 void mqtt_subcribe(const char* topic){
-    std::string fullTopic = std::string(MAIN_TOPIC) + topic;
-    client.subscribe(fullTopic.c_str());
+    // Aloca memória suficiente para armazenar o tópico completo
+    char* topicoCompleto = new char[strlen(MAIN_TOPIC) + strlen(topic) + 1];
+    
+    // Copia MAIN_TOPIC para topicoCompleto
+    strcpy(topicoCompleto, MAIN_TOPIC);
+    
+    // Concatena topico em topicoCompleto
+    strcat(topicoCompleto, topic
+    );
+    
+    // Assumindo que client.subscribe() aceita uma const char*
+    client.subscribe(topicoCompleto);
+    
+    // Imprime a mensagem
+    std::cout << "Topico: " << topicoCompleto << " inscrito" << std::endl;
+    
+    // Libera a memória alocada
+    delete[] topicoCompleto;
 }
-
-// void subscribeToMQTTTopics() {
-//   for (int i = 0; i < sizeof(topicos) / sizeof(topicos[0]); i++) {
-//     client.subscribe(topicos[i]);
-//     Serial.println("Inscrito no tópico: " + String(topicos[i]));
-//   }
-// }
 
 void mqttConnect() {
 

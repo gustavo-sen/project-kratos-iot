@@ -29,7 +29,7 @@
             },
             "darkTheme": {
                 "default": "#097479",
-                "baseColor": "#613583",
+                "baseColor": "#813d9c",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
                 "edited": true,
                 "reset": false
@@ -38,16 +38,17 @@
                 "name": "Untitled Theme 1",
                 "default": "#4B7930",
                 "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
             },
             "themeState": {
                 "base-color": {
                     "default": "#097479",
-                    "value": "#613583",
+                    "value": "#813d9c",
                     "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#613583",
+                    "value": "#813d9c",
                     "edited": false
                 },
                 "page-backgroundColor": {
@@ -59,7 +60,7 @@
                     "edited": false
                 },
                 "group-textColor": {
-                    "value": "#894db7",
+                    "value": "#a763c2",
                     "edited": false
                 },
                 "group-borderColor": {
@@ -75,7 +76,7 @@
                     "edited": false
                 },
                 "widget-backgroundColor": {
-                    "value": "#613583",
+                    "value": "#813d9c",
                     "edited": false
                 },
                 "widget-borderColor": {

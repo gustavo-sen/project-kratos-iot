@@ -17,6 +17,10 @@ void setup() {
 
     wifiSetup();
     mqtt_setup();
+
+    mqtt_subcribe("luz");
+    
+    //tasks
     xTaskCreate(task_mqtt_callback, "Task_mqtt_callback", 10000, NULL, 1, NULL);
 
 }
