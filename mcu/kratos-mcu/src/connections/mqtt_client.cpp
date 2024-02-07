@@ -38,7 +38,10 @@ void callback(char* topic, byte* message, unsigned int length) {
         packageTemp += (char)message[i];
     }
 
-    lamp_update(packageTemp);
+    if(strcat(topic, "home/lamp")){
+        lamp_update(packageTemp, 0);
+        
+    }
 
 }
 
