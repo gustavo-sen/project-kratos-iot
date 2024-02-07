@@ -41,6 +41,10 @@ void callback(char* topic, byte* message, unsigned int length) {
         packageTemp += (char)message[i];
     }
     
+    if(strcmp(topic, "luz") == 0){
+        std::cout << "entrou luz";
+    }
+
 }
 
 void mqtt_publish(const char* topic, const char* payload){
@@ -60,6 +64,7 @@ void mqtt_subcribe(const char* topic){
     client.subscribe(topicoCompleto);
     
     std::cout << "inscrito em " << topicoCompleto;
+    
     // Libera a memória alocada
     delete[] topicoCompleto;
 }
@@ -76,5 +81,5 @@ void mqttConnect() {
             vTaskDelay(2000 / portTICK_RATE_MS);
         }
     }
-    
+
 }
