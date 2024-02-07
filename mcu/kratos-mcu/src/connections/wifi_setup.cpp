@@ -1,5 +1,4 @@
 #include "./headers/wifi_setup.hpp"
-#include <iostream>
 #include <WiFi.h>
 
 char ssid[] = "VORTEX";
