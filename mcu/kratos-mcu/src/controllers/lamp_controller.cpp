@@ -8,7 +8,7 @@
 #include "./headers/mqtt_client.hpp"
 
 void setup_lamp(){
-    mqtt_subcribe("luz");
+    mqtt_subcribe("lamp");
     gpio_set_direction(GPIO_NUM_21, GPIO_MODE_OUTPUT);
 }
 
