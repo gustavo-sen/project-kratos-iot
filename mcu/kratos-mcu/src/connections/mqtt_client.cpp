@@ -4,6 +4,8 @@
 #include <set>
 #include <type_traits>
 
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
 #include <WiFi.h>
 #include <PubSubClient.h>
 
@@ -21,17 +23,14 @@ const char* MQTT_PORT = "1883";
 WiFiClient espClient;
 PubSubClient client(espClient);
 
+void mqtt_client_callback_task(void* xTaskParameters);
+
 void mqtt_setup(){
     client.setServer(MQTT_SERVER, 1883);
     client.setCallback(callback);
-
     mqttConnect();
 
     client.publish("join", "connection estabilished.");
-}
-
-void client_loop(){
-    client.loop();
 }
 
 void callback(char* topic, byte* message, unsigned int length) {
@@ -40,11 +39,19 @@ void callback(char* topic, byte* message, unsigned int length) {
     for (unsigned int i = 0; i < length; i++) {
         packageTemp += (char)message[i];
     }
-    
-    if(strcmp(topic, "luz") == 0){
-        std::cout << "entrou luz";
-    }
 
+    lamp_update(packageTemp);
+
+}
+
+void mqtt_client_callback_task(){
+    while (1) {
+        if (!client.connected()) {
+            mqttConnect();
+        } else {
+            client.loop();
+        }
+    }
 }
 
 void mqtt_publish(const char* topic, const char* payload){
@@ -70,16 +77,10 @@ void mqtt_subcribe(const char* topic){
 }
 
 void mqttConnect() {
-
     while (!client.connected()){
-        std::cout << ("Attempting MQTT connection...\n");
-
         if (client.connect(CLIENT_ID, MQTT_USER, MQTT_PASS)) {
-            std::cout << ("connected") << std::endl;
         } else {
-            std::cout << ("Connection failed") << std::endl;
             vTaskDelay(2000 / portTICK_RATE_MS);
         }
     }
-
 }

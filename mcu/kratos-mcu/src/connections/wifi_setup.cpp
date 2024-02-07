@@ -1,7 +1,6 @@
 #include "./headers/wifi_setup.hpp"
-
+#include <iostream>
 #include <WiFi.h>
-#include <PubSubClient.h>
 
 char ssid[] = "VORTEX";
 char password[] = "pprKN@Fv";
@@ -12,10 +11,8 @@ void wifiSetup(){
 }
 
 void wifiConnect(){
-
     while (!WiFi.isConnected()){
         WiFi.begin(ssid,password);
-       
         gpio_set_level(GPIO_NUM_2, 1);
         vTaskDelay(100 / portTICK_RATE_MS);
         gpio_set_level(GPIO_NUM_2, 0);
