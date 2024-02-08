@@ -1,2 +1,4 @@
 *.backup
 *.zip
+pcb/kratos-pcb/_autosave-kratos-pcb.kicad_pcb
+pcb/kratos-pcb/~_autosave-kratos-pcb.kicad_pcb.lck
