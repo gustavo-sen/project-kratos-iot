@@ -16,6 +16,14 @@
         "env": []
     },
     {
+        "id": "f37c9f369d824e1f",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "3563d00d68873830",
         "type": "ui_base",
         "theme": {
@@ -166,6 +174,33 @@
         "sessionExpiry": ""
     },
     {
+        "id": "6a9428c91ab8b217",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "7426176b38d2a214",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7426176b38d2a214",
+        "type": "ui_tab",
+        "name": "Tab 2",
+        "icon": "dashboard",
+        "order": 2
+    },
+    {
+        "id": "0fc7b11b032ba303",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "7426176b38d2a214",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
         "id": "5e052d4fa8ca34aa",
         "type": "aedes broker",
         "z": "62947d5f581f77cb",
@@ -274,7 +309,7 @@
         "label": "Lamp 1",
         "tooltip": "",
         "group": "e227bccc7e6a0845",
-        "order": 0,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -314,8 +349,8 @@
         "correl": "",
         "expiry": "",
         "broker": "89895e19de20a335",
-        "x": 430,
-        "y": 120,
+        "x": 370,
+        "y": 180,
         "wires": []
     },
     {
@@ -326,7 +361,7 @@
         "label": "Lamp 2",
         "tooltip": "",
         "group": "e227bccc7e6a0845",
-        "order": 0,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -345,7 +380,7 @@
         "animate": false,
         "className": "",
         "x": 180,
-        "y": 200,
+        "y": 180,
         "wires": [
             [
                 "33eee9a40f27fc26"
@@ -360,7 +395,7 @@
         "label": "Lamp 3",
         "tooltip": "",
         "group": "e227bccc7e6a0845",
-        "order": 0,
+        "order": 4,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -379,11 +414,114 @@
         "animate": false,
         "className": "",
         "x": 180,
-        "y": 280,
+        "y": 240,
         "wires": [
             [
                 "33eee9a40f27fc26"
             ]
+        ]
+    },
+    {
+        "id": "72cc56167616afdf",
+        "type": "ui_dropdown",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "label": "Modos",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "6a9428c91ab8b217",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Modo Noturno",
+                "value": "modo_norturno",
+                "type": "str"
+            },
+            {
+                "label": "Modo Dia",
+                "value": "modo_dia",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 190,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "09768dcde315cf39",
+        "type": "ui_button",
+        "z": "f37c9f369d824e1f",
+        "name": "",
+        "group": "e227bccc7e6a0845",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "button",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 90,
+        "y": 60,
+        "wires": [
+            [
+                "d75770182d921b89"
+            ]
+        ]
+    },
+    {
+        "id": "d75770182d921b89",
+        "type": "change",
+        "z": "f37c9f369d824e1f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\":\"Tab 1\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 260,
+        "y": 60,
+        "wires": [
+            [
+                "b24eca4640c7fe93"
+            ]
+        ]
+    },
+    {
+        "id": "b24eca4640c7fe93",
+        "type": "ui_ui_control",
+        "z": "f37c9f369d824e1f",
+        "name": "",
+        "events": "all",
+        "x": 440,
+        "y": 60,
+        "wires": [
+            []
         ]
     }
 ]
