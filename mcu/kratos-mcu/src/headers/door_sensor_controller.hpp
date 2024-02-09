@@ -2,8 +2,8 @@
 #include "driver/gpio.h"
 
 typedef enum{
-    DOOR1 = GPIO_NUM_18,
-    DOOR2 = GPIO_NUM_19
+    DOOR1 = GPIO_NUM_27,
+    DOOR2 = GPIO_NUM_14
 } Door;
 
 void setup_door_sensor();
