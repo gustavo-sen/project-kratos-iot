@@ -10,7 +10,7 @@
     {
         "id": "c4fad207f982e03f",
         "type": "tab",
-        "label": "Flow 3",
+        "label": "Ligths",
         "disabled": false,
         "info": "",
         "env": []
@@ -18,7 +18,15 @@
     {
         "id": "f37c9f369d824e1f",
         "type": "tab",
-        "label": "Flow 2",
+        "label": "Security",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "70068137e54b09a8",
+        "type": "tab",
+        "label": "Cooling",
         "disabled": false,
         "info": "",
         "env": []
@@ -123,26 +131,6 @@
         }
     },
     {
-        "id": "39a23d1bf5e6bc76",
-        "type": "ui_tab",
-        "name": "Tab 1",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "e227bccc7e6a0845",
-        "type": "ui_group",
-        "name": "DEBUG",
-        "tab": "39a23d1bf5e6bc76",
-        "order": 1,
-        "disp": true,
-        "width": 4,
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "89895e19de20a335",
         "type": "mqtt-broker",
         "name": "",
@@ -174,10 +162,40 @@
         "sessionExpiry": ""
     },
     {
+        "id": "7426176b38d2a214",
+        "type": "ui_tab",
+        "name": "Temperature",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "0fc7b11b032ba303",
+        "type": "ui_group",
+        "name": "Lampadas",
+        "tab": "5911a32f8c4a19e4",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ca33fd7d8e083f9e",
+        "type": "ui_spacer",
+        "z": "62947d5f581f77cb",
+        "name": "spacer",
+        "group": "6a9428c91ab8b217",
+        "order": 1,
+        "width": "1",
+        "height": "1"
+    },
+    {
         "id": "6a9428c91ab8b217",
         "type": "ui_group",
-        "name": "Default",
-        "tab": "7426176b38d2a214",
+        "name": "Security",
+        "tab": "ed955c3abd5fad2e",
         "order": 2,
         "disp": true,
         "width": "6",
@@ -185,20 +203,44 @@
         "className": ""
     },
     {
-        "id": "7426176b38d2a214",
-        "type": "ui_tab",
-        "name": "Tab 2",
-        "icon": "dashboard",
-        "order": 2
-    },
-    {
-        "id": "0fc7b11b032ba303",
+        "id": "3bafb5f4d0dd6d9e",
         "type": "ui_group",
-        "name": "Group 1",
+        "name": "Temperature",
         "tab": "7426176b38d2a214",
         "order": 1,
         "disp": true,
-        "width": 6
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ed955c3abd5fad2e",
+        "type": "ui_tab",
+        "name": "Security",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "5911a32f8c4a19e4",
+        "type": "ui_tab",
+        "name": "Ligth",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "31e5291a19a72c92",
+        "type": "ui_group",
+        "name": "LEDs",
+        "tab": "5911a32f8c4a19e4",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "5e052d4fa8ca34aa",
@@ -219,47 +261,9 @@
         "x": 90,
         "y": 60,
         "wires": [
-            [
-                "47a8920f8d61e96e"
-            ],
-            [
-                "2259fb6cc2ceb022"
-            ]
+            [],
+            []
         ]
-    },
-    {
-        "id": "2259fb6cc2ceb022",
-        "type": "debug",
-        "z": "62947d5f581f77cb",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 300,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "47a8920f8d61e96e",
-        "type": "debug",
-        "z": "62947d5f581f77cb",
-        "name": "debug 2",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 300,
-        "y": 40,
-        "wires": []
     },
     {
         "id": "c1ebf1a0d06f37b4",
@@ -302,13 +306,81 @@
         "wires": []
     },
     {
+        "id": "b24eca4640c7fe93",
+        "type": "ui_ui_control",
+        "z": "62947d5f581f77cb",
+        "name": "",
+        "events": "all",
+        "x": 300,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3f715dbac0af8392",
+        "type": "ui_button",
+        "z": "62947d5f581f77cb",
+        "name": "",
+        "group": "3bafb5f4d0dd6d9e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Ligth",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"group\":{\"hide\":[\"Security\"],\"show\":[\"Ligth\"]}}",
+        "payloadType": "json",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 90,
+        "y": 300,
+        "wires": [
+            [
+                "b24eca4640c7fe93"
+            ]
+        ]
+    },
+    {
+        "id": "6290c934432d30f7",
+        "type": "ui_button",
+        "z": "62947d5f581f77cb",
+        "name": "",
+        "group": "3bafb5f4d0dd6d9e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Security",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"group\":{\"hide\":[\"Ligth\"],\"show\":[\"Security\"]}}",
+        "payloadType": "json",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 100,
+        "y": 260,
+        "wires": [
+            [
+                "b24eca4640c7fe93"
+            ]
+        ]
+    },
+    {
         "id": "389aa80be53d35ed",
         "type": "ui_switch",
         "z": "c4fad207f982e03f",
         "name": "",
         "label": "Lamp 1",
         "tooltip": "",
-        "group": "e227bccc7e6a0845",
+        "group": "0fc7b11b032ba303",
         "order": 2,
         "width": 0,
         "height": 0,
@@ -360,7 +432,7 @@
         "name": "",
         "label": "Lamp 2",
         "tooltip": "",
-        "group": "e227bccc7e6a0845",
+        "group": "0fc7b11b032ba303",
         "order": 3,
         "width": 0,
         "height": 0,
@@ -394,7 +466,7 @@
         "name": "",
         "label": "Lamp 3",
         "tooltip": "",
-        "group": "e227bccc7e6a0845",
+        "group": "0fc7b11b032ba303",
         "order": 4,
         "width": 0,
         "height": 0,
@@ -424,13 +496,13 @@
     {
         "id": "72cc56167616afdf",
         "type": "ui_dropdown",
-        "z": "c4fad207f982e03f",
+        "z": "f37c9f369d824e1f",
         "name": "",
         "label": "Modos",
         "tooltip": "",
         "place": "Select option",
         "group": "6a9428c91ab8b217",
-        "order": 1,
+        "order": 4,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -451,77 +523,131 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 190,
-        "y": 480,
+        "x": 130,
+        "y": 100,
         "wires": [
             []
         ]
     },
     {
-        "id": "09768dcde315cf39",
-        "type": "ui_button",
+        "id": "bf3c2cfde862a5b8",
+        "type": "ui_switch",
         "z": "f37c9f369d824e1f",
         "name": "",
-        "group": "e227bccc7e6a0845",
+        "label": "Alarme",
+        "tooltip": "",
+        "group": "6a9428c91ab8b217",
         "order": 1,
         "width": 0,
         "height": 0,
-        "passthru": false,
-        "label": "button",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
+        "passthru": true,
+        "decouple": "false",
         "topic": "topic",
         "topicType": "msg",
-        "x": 90,
-        "y": 60,
-        "wires": [
-            [
-                "d75770182d921b89"
-            ]
-        ]
-    },
-    {
-        "id": "d75770182d921b89",
-        "type": "change",
-        "z": "f37c9f369d824e1f",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"tab\":\"Tab 2\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 260,
-        "y": 60,
-        "wires": [
-            [
-                "b24eca4640c7fe93"
-            ]
-        ]
-    },
-    {
-        "id": "b24eca4640c7fe93",
-        "type": "ui_ui_control",
-        "z": "f37c9f369d824e1f",
-        "name": "",
-        "events": "all",
-        "x": 440,
-        "y": 60,
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 140,
+        "y": 160,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "48417b9c394336cb",
+        "type": "ui_switch",
+        "z": "f37c9f369d824e1f",
+        "name": "",
+        "label": "Tranca",
+        "tooltip": "",
+        "group": "6a9428c91ab8b217",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 130,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "29fbd8b80213eff1",
+        "type": "ui_gauge",
+        "z": "70068137e54b09a8",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00B500",
+            "#E6E600",
+            "#CA3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 230,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "56947688f77bafde",
+        "type": "ui_text",
+        "z": "70068137e54b09a8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000",
+        "x": 230,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "0ba593b0c16ba944",
+        "type": "comment",
+        "z": "70068137e54b09a8",
+        "name": "FUNÇÃO DE PEGAR TEMPO E ",
+        "info": "FUNÇÃO DE PEGAR TEMPO PARA ATIVAR O AR OU LIGAR AS LUZES",
+        "x": 310,
+        "y": 80,
+        "wires": []
     }
 ]
