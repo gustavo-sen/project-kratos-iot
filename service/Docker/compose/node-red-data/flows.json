@@ -262,7 +262,9 @@
         "y": 60,
         "wires": [
             [],
-            []
+            [
+                "5c55518b0883604b"
+            ]
         ]
     },
     {
@@ -374,38 +376,21 @@
         ]
     },
     {
-        "id": "389aa80be53d35ed",
-        "type": "ui_switch",
-        "z": "c4fad207f982e03f",
-        "name": "",
-        "label": "Lamp 1",
-        "tooltip": "",
-        "group": "0fc7b11b032ba303",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "home/lamp",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "{\"lampNumber\":0,\"isOn\":true}",
-        "onvalueType": "json",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "{     \"lampNumber\": 0,     \"isOn\": false }",
-        "offvalueType": "json",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 180,
-        "y": 120,
-        "wires": [
-            [
-                "33eee9a40f27fc26"
-            ]
-        ]
+        "id": "5c55518b0883604b",
+        "type": "debug",
+        "z": "62947d5f581f77cb",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 280,
+        "y": 80,
+        "wires": []
     },
     {
         "id": "33eee9a40f27fc26",
@@ -487,6 +472,40 @@
         "className": "",
         "x": 180,
         "y": 240,
+        "wires": [
+            [
+                "33eee9a40f27fc26"
+            ]
+        ]
+    },
+    {
+        "id": "389aa80be53d35ed",
+        "type": "ui_switch",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "label": "Lamp 1",
+        "tooltip": "",
+        "group": "0fc7b11b032ba303",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "home/lamp",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "{\"lampNumber\":0,\"isOn\":true}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{     \"lampNumber\": 0,     \"isOn\": false }",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 180,
+        "y": 120,
         "wires": [
             [
                 "33eee9a40f27fc26"
@@ -594,53 +613,6 @@
         ]
     },
     {
-        "id": "29fbd8b80213eff1",
-        "type": "ui_gauge",
-        "z": "70068137e54b09a8",
-        "name": "",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "gauge",
-        "label": "units",
-        "format": "{{value}}",
-        "min": 0,
-        "max": 10,
-        "colors": [
-            "#00B500",
-            "#E6E600",
-            "#CA3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 230,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "56947688f77bafde",
-        "type": "ui_text",
-        "z": "70068137e54b09a8",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "text",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000",
-        "x": 230,
-        "y": 200,
-        "wires": []
-    },
-    {
         "id": "0ba593b0c16ba944",
         "type": "comment",
         "z": "70068137e54b09a8",
@@ -649,5 +621,50 @@
         "x": 310,
         "y": 80,
         "wires": []
+    },
+    {
+        "id": "a66b6f212505f627",
+        "type": "mqtt out",
+        "z": "70068137e54b09a8",
+        "name": "",
+        "topic": "home/cooling",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "89895e19de20a335",
+        "x": 430,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "f885c92942f61539",
+        "type": "ui_slider",
+        "z": "70068137e54b09a8",
+        "name": "",
+        "label": "slider",
+        "tooltip": "",
+        "group": "3bafb5f4d0dd6d9e",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "home/cooling",
+        "topicType": "msg",
+        "min": 0,
+        "max": "255",
+        "step": 1,
+        "className": "",
+        "x": 230,
+        "y": 160,
+        "wires": [
+            [
+                "a66b6f212505f627"
+            ]
+        ]
     }
 ]
