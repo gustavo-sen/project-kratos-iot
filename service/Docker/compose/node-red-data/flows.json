@@ -175,7 +175,7 @@
         "type": "ui_group",
         "name": "Lampadas",
         "tab": "5911a32f8c4a19e4",
-        "order": 3,
+        "order": 1,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -262,9 +262,7 @@
         "y": 60,
         "wires": [
             [],
-            [
-                "5c55518b0883604b"
-            ]
+            []
         ]
     },
     {
@@ -325,7 +323,7 @@
         "z": "62947d5f581f77cb",
         "name": "",
         "group": "3bafb5f4d0dd6d9e",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -353,7 +351,7 @@
         "z": "62947d5f581f77cb",
         "name": "",
         "group": "3bafb5f4d0dd6d9e",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -376,23 +374,6 @@
         ]
     },
     {
-        "id": "5c55518b0883604b",
-        "type": "debug",
-        "z": "62947d5f581f77cb",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 280,
-        "y": 80,
-        "wires": []
-    },
-    {
         "id": "33eee9a40f27fc26",
         "type": "mqtt out",
         "z": "c4fad207f982e03f",
@@ -406,8 +387,8 @@
         "correl": "",
         "expiry": "",
         "broker": "89895e19de20a335",
-        "x": 370,
-        "y": 180,
+        "x": 350,
+        "y": 300,
         "wires": []
     },
     {
@@ -436,7 +417,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 180,
+        "x": 100,
         "y": 180,
         "wires": [
             [
@@ -470,7 +451,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 180,
+        "x": 100,
         "y": 240,
         "wires": [
             [
@@ -480,6 +461,302 @@
     },
     {
         "id": "389aa80be53d35ed",
+        "type": "ui_switch",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "label": "Sala",
+        "tooltip": "",
+        "group": "0fc7b11b032ba303",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "home/lamp",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "{\"lampNumber\":0,\"isOn\":true}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{     \"lampNumber\": 0,     \"isOn\": false }",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 90,
+        "y": 120,
+        "wires": [
+            [
+                "33eee9a40f27fc26"
+            ]
+        ]
+    },
+    {
+        "id": "82d355878d537994",
+        "type": "ui_iro-color-picker",
+        "z": "c4fad207f982e03f",
+        "group": "31e5291a19a72c92",
+        "order": 2,
+        "width": "4",
+        "height": "4",
+        "name": "",
+        "label": "",
+        "placement": "left",
+        "hAlign": "flex-start",
+        "vAlign": "flex-start",
+        "stateField": "payload",
+        "enableField": "enable",
+        "layoutDirection": "vertical",
+        "widgetIndent": "3",
+        "buttonWidth": "2",
+        "pickerType": "widget",
+        "popupWidth": 0,
+        "popupHeight": 0,
+        "pickerSize": "100",
+        "backgroundDim": "50",
+        "backgroundColor": "#000000",
+        "backgroundVariable": false,
+        "components": [
+            {
+                "options": {
+                    "borderColor": "#000000",
+                    "borderWidth": 0,
+                    "wheelLightness": false,
+                    "wheelAngle": 0,
+                    "wheelDirection": "anticlockwise"
+                },
+                "componentId": "picker"
+            }
+        ],
+        "format": "hex",
+        "outFormat": "rgb",
+        "dynOutput": "input:end",
+        "outputConfirmed": false,
+        "outputLimit": "10",
+        "passthru": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "iroColorValue": "#ff0000",
+        "x": 260,
+        "y": 640,
+        "wires": [
+            [
+                "9d7c68e7e218b5a0"
+            ]
+        ]
+    },
+    {
+        "id": "49f805b9b68e4417",
+        "type": "ui_iro-color-picker",
+        "z": "c4fad207f982e03f",
+        "group": "31e5291a19a72c92",
+        "order": 4,
+        "width": "4",
+        "height": "4",
+        "name": "",
+        "label": "",
+        "placement": "left",
+        "hAlign": "flex-start",
+        "vAlign": "flex-start",
+        "stateField": "payload",
+        "enableField": "enable",
+        "layoutDirection": "vertical",
+        "widgetIndent": "3",
+        "buttonWidth": "2",
+        "pickerType": "widget",
+        "popupWidth": 0,
+        "popupHeight": 0,
+        "pickerSize": "100",
+        "backgroundDim": "50",
+        "backgroundColor": "#000000",
+        "backgroundVariable": false,
+        "components": [
+            {
+                "options": {
+                    "borderColor": "#000000",
+                    "borderWidth": 0,
+                    "wheelLightness": true,
+                    "wheelAngle": 0,
+                    "wheelDirection": "anticlockwise"
+                },
+                "componentId": "picker"
+            }
+        ],
+        "format": "hex",
+        "outFormat": "rgb",
+        "dynOutput": "input:end",
+        "outputConfirmed": false,
+        "outputLimit": "10",
+        "passthru": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "iroColorValue": "#ff0000",
+        "x": 260,
+        "y": 720,
+        "wires": [
+            [
+                "9d7c68e7e218b5a0"
+            ]
+        ]
+    },
+    {
+        "id": "d137d94a76b0edc6",
+        "type": "ui_switch",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "label": "switch",
+        "tooltip": "",
+        "group": "31e5291a19a72c92",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "home/cooling",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "25",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 90,
+        "y": 640,
+        "wires": [
+            [
+                "82d355878d537994"
+            ]
+        ]
+    },
+    {
+        "id": "4cbee6a42647f8eb",
+        "type": "ui_switch",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "label": "switch",
+        "tooltip": "",
+        "group": "31e5291a19a72c92",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "home/cooling",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "25",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 90,
+        "y": 720,
+        "wires": [
+            [
+                "49f805b9b68e4417"
+            ]
+        ]
+    },
+    {
+        "id": "9d7c68e7e218b5a0",
+        "type": "mqtt out",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "89895e19de20a335",
+        "x": 470,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "58a5060701c4a92e",
+        "type": "ui_switch",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "label": "Lamp 2",
+        "tooltip": "",
+        "group": "0fc7b11b032ba303",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "home/lamp",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "{\"lampNumber\":1,\"isOn\":true}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{     \"lampNumber\": 1,     \"isOn\": false }",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 100,
+        "y": 360,
+        "wires": [
+            [
+                "33eee9a40f27fc26"
+            ]
+        ]
+    },
+    {
+        "id": "d2cad7b2a4943a6b",
+        "type": "ui_switch",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "label": "Lamp 3",
+        "tooltip": "",
+        "group": "0fc7b11b032ba303",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "home/lamp",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "{\"lampNumber\":2,\"isOn\":true}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{     \"lampNumber\": 2,     \"isOn\": false }",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 100,
+        "y": 420,
+        "wires": [
+            [
+                "33eee9a40f27fc26"
+            ]
+        ]
+    },
+    {
+        "id": "e9f5a70245227b76",
         "type": "ui_switch",
         "z": "c4fad207f982e03f",
         "name": "",
@@ -504,13 +781,57 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 180,
-        "y": 120,
+        "x": 100,
+        "y": 300,
         "wires": [
             [
                 "33eee9a40f27fc26"
             ]
         ]
+    },
+    {
+        "id": "baa386ce979d9521",
+        "type": "ui_switch",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "label": "Lamp 4",
+        "tooltip": "",
+        "group": "0fc7b11b032ba303",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "home/lamp",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "{\"lampNumber\":3,\"isOn\":true}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{     \"lampNumber\": 3,     \"isOn\": false }",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 100,
+        "y": 480,
+        "wires": [
+            [
+                "33eee9a40f27fc26"
+            ]
+        ]
+    },
+    {
+        "id": "c9bc45c16b5a48dc",
+        "type": "comment",
+        "z": "c4fad207f982e03f",
+        "name": "corrigir nomenclaturas",
+        "info": "",
+        "x": 380,
+        "y": 200,
+        "wires": []
     },
     {
         "id": "72cc56167616afdf",
@@ -636,7 +957,7 @@
         "correl": "",
         "expiry": "",
         "broker": "89895e19de20a335",
-        "x": 430,
+        "x": 710,
         "y": 160,
         "wires": []
     },
@@ -645,25 +966,79 @@
         "type": "ui_slider",
         "z": "70068137e54b09a8",
         "name": "",
-        "label": "slider",
+        "label": "Cooling speed",
         "tooltip": "",
         "group": "3bafb5f4d0dd6d9e",
-        "order": 4,
-        "width": 0,
-        "height": 0,
+        "order": 1,
+        "width": "6",
+        "height": "1",
         "passthru": true,
         "outs": "end",
         "topic": "home/cooling",
         "topicType": "msg",
-        "min": 0,
-        "max": "255",
-        "step": 1,
+        "min": "0",
+        "max": "100",
+        "step": "20",
         "className": "",
-        "x": 230,
+        "x": 340,
+        "y": 160,
+        "wires": [
+            [
+                "7e2436b9244eff73"
+            ]
+        ]
+    },
+    {
+        "id": "7e2436b9244eff73",
+        "type": "range",
+        "z": "70068137e54b09a8",
+        "minin": "0",
+        "maxin": "100",
+        "minout": "0",
+        "maxout": "255",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 520,
         "y": 160,
         "wires": [
             [
                 "a66b6f212505f627"
+            ]
+        ]
+    },
+    {
+        "id": "e325bb067942d52f",
+        "type": "ui_switch",
+        "z": "70068137e54b09a8",
+        "name": "",
+        "label": "switch",
+        "tooltip": "",
+        "group": "3bafb5f4d0dd6d9e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "home/cooling",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "40",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 170,
+        "y": 160,
+        "wires": [
+            [
+                "f885c92942f61539"
             ]
         ]
     }
