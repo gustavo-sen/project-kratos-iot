@@ -11,5 +11,5 @@ void set_up_lockers(){
 }
 
 void set_door_lock(DoorLocket door, bool isToSet){
-    gpio_set_level((gpio_num_t) door, isToSet);
+    gpio_set_level((gpio_num_t) door, !isToSet);
 }
