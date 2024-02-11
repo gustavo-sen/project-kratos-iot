@@ -8,6 +8,8 @@
 #include "headers/door_locker_controller.hpp"  
 #include "headers/mqtt_client.hpp"
 #include "headers/lamp_controller.hpp"
+#include "headers/fan_controller.hpp"
+
 
 void setup() {
     wifiSetup();
@@ -16,6 +18,7 @@ void setup() {
     setup_lamp();  
     setup_door_sensor();
     set_up_lockers();
+    fan_setup();
 
 }
 
