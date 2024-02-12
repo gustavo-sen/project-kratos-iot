@@ -182,16 +182,6 @@
         "className": ""
     },
     {
-        "id": "ca33fd7d8e083f9e",
-        "type": "ui_spacer",
-        "z": "62947d5f581f77cb",
-        "name": "spacer",
-        "group": "6a9428c91ab8b217",
-        "order": 1,
-        "width": "1",
-        "height": "1"
-    },
-    {
         "id": "6a9428c91ab8b217",
         "type": "ui_group",
         "name": "Security",
@@ -241,29 +231,6 @@
         "width": "6",
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "5e052d4fa8ca34aa",
-        "type": "aedes broker",
-        "z": "62947d5f581f77cb",
-        "name": "Broker",
-        "mqtt_port": 1883,
-        "mqtt_ws_bind": "port",
-        "mqtt_ws_port": "",
-        "mqtt_ws_path": "",
-        "cert": "",
-        "key": "",
-        "certname": "",
-        "keyname": "",
-        "persistence_bind": "memory",
-        "dburl": "",
-        "usetls": false,
-        "x": 90,
-        "y": 60,
-        "wires": [
-            [],
-            []
-        ]
     },
     {
         "id": "c1ebf1a0d06f37b4",
@@ -371,6 +338,29 @@
             [
                 "b24eca4640c7fe93"
             ]
+        ]
+    },
+    {
+        "id": "c2ce2ba782e2fbca",
+        "type": "aedes broker",
+        "z": "62947d5f581f77cb",
+        "name": "",
+        "mqtt_port": 1883,
+        "mqtt_ws_bind": "port",
+        "mqtt_ws_port": "",
+        "mqtt_ws_path": "",
+        "cert": "",
+        "key": "",
+        "certname": "",
+        "keyname": "",
+        "persistence_bind": "memory",
+        "dburl": "",
+        "usetls": false,
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [],
+            []
         ]
     },
     {
@@ -494,187 +484,11 @@
         ]
     },
     {
-        "id": "82d355878d537994",
-        "type": "ui_iro-color-picker",
-        "z": "c4fad207f982e03f",
-        "group": "31e5291a19a72c92",
-        "order": 2,
-        "width": "4",
-        "height": "4",
-        "name": "",
-        "label": "",
-        "placement": "left",
-        "hAlign": "flex-start",
-        "vAlign": "flex-start",
-        "stateField": "payload",
-        "enableField": "enable",
-        "layoutDirection": "vertical",
-        "widgetIndent": "3",
-        "buttonWidth": "2",
-        "pickerType": "widget",
-        "popupWidth": 0,
-        "popupHeight": 0,
-        "pickerSize": "100",
-        "backgroundDim": "50",
-        "backgroundColor": "#000000",
-        "backgroundVariable": false,
-        "components": [
-            {
-                "options": {
-                    "borderColor": "#000000",
-                    "borderWidth": 0,
-                    "wheelLightness": false,
-                    "wheelAngle": 0,
-                    "wheelDirection": "anticlockwise"
-                },
-                "componentId": "picker"
-            }
-        ],
-        "format": "hex",
-        "outFormat": "rgb",
-        "dynOutput": "input:end",
-        "outputConfirmed": false,
-        "outputLimit": "10",
-        "passthru": false,
-        "topic": "topic",
-        "topicType": "msg",
-        "iroColorValue": "#ff0000",
-        "x": 260,
-        "y": 640,
-        "wires": [
-            [
-                "9d7c68e7e218b5a0"
-            ]
-        ]
-    },
-    {
-        "id": "49f805b9b68e4417",
-        "type": "ui_iro-color-picker",
-        "z": "c4fad207f982e03f",
-        "group": "31e5291a19a72c92",
-        "order": 4,
-        "width": "4",
-        "height": "4",
-        "name": "",
-        "label": "",
-        "placement": "left",
-        "hAlign": "flex-start",
-        "vAlign": "flex-start",
-        "stateField": "payload",
-        "enableField": "enable",
-        "layoutDirection": "vertical",
-        "widgetIndent": "3",
-        "buttonWidth": "2",
-        "pickerType": "widget",
-        "popupWidth": 0,
-        "popupHeight": 0,
-        "pickerSize": "100",
-        "backgroundDim": "50",
-        "backgroundColor": "#000000",
-        "backgroundVariable": false,
-        "components": [
-            {
-                "options": {
-                    "borderColor": "#000000",
-                    "borderWidth": 0,
-                    "wheelLightness": true,
-                    "wheelAngle": 0,
-                    "wheelDirection": "anticlockwise"
-                },
-                "componentId": "picker"
-            }
-        ],
-        "format": "hex",
-        "outFormat": "rgb",
-        "dynOutput": "input:end",
-        "outputConfirmed": false,
-        "outputLimit": "10",
-        "passthru": false,
-        "topic": "topic",
-        "topicType": "msg",
-        "iroColorValue": "#ff0000",
-        "x": 260,
-        "y": 720,
-        "wires": [
-            [
-                "9d7c68e7e218b5a0"
-            ]
-        ]
-    },
-    {
-        "id": "d137d94a76b0edc6",
-        "type": "ui_switch",
-        "z": "c4fad207f982e03f",
-        "name": "",
-        "label": "switch",
-        "tooltip": "",
-        "group": "31e5291a19a72c92",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "home/cooling",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "25",
-        "onvalueType": "num",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "0",
-        "offvalueType": "num",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 90,
-        "y": 640,
-        "wires": [
-            [
-                "82d355878d537994"
-            ]
-        ]
-    },
-    {
-        "id": "4cbee6a42647f8eb",
-        "type": "ui_switch",
-        "z": "c4fad207f982e03f",
-        "name": "",
-        "label": "switch",
-        "tooltip": "",
-        "group": "31e5291a19a72c92",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "home/cooling",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "25",
-        "onvalueType": "num",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "0",
-        "offvalueType": "num",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 90,
-        "y": 720,
-        "wires": [
-            [
-                "49f805b9b68e4417"
-            ]
-        ]
-    },
-    {
         "id": "9d7c68e7e218b5a0",
         "type": "mqtt out",
         "z": "c4fad207f982e03f",
         "name": "",
-        "topic": "",
+        "topic": "home/ligth/rgb",
         "qos": "2",
         "retain": "false",
         "respTopic": "",
@@ -683,8 +497,8 @@
         "correl": "",
         "expiry": "",
         "broker": "89895e19de20a335",
-        "x": 470,
-        "y": 680,
+        "x": 700,
+        "y": 620,
         "wires": []
     },
     {
@@ -834,6 +648,246 @@
         "wires": []
     },
     {
+        "id": "b00fa90491e4f80e",
+        "type": "function",
+        "z": "c4fad207f982e03f",
+        "name": "function 2",
+        "func": "if (msg.payload === true) {\n    return {\n        payload: { \"r\": 100, \"g\": 100, \"b\": 100,\"a\":1}, // Mantém a cor selecionada\n        enabled: true // Habilita o color picker\n    };\n} else {\n    return {\n        payload: \"#000000\", // Cor inicial branca\n        enabled: false // Desabilita o color picker\n    };\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 620,
+        "wires": [
+            [
+                "ee9d44a73c9c9a4d"
+            ]
+        ]
+    },
+    {
+        "id": "41f5d33819526c2d",
+        "type": "ui_switch",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "label": "SUITE-LED",
+        "tooltip": "",
+        "group": "31e5291a19a72c92",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 110,
+        "y": 660,
+        "wires": [
+            [
+                "b00fa90491e4f80e"
+            ]
+        ]
+    },
+    {
+        "id": "481d9304fffe2a79",
+        "type": "inject",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "str",
+        "x": 130,
+        "y": 580,
+        "wires": [
+            [
+                "b00fa90491e4f80e"
+            ]
+        ]
+    },
+    {
+        "id": "ee9d44a73c9c9a4d",
+        "type": "ui_colour_picker",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "label": "",
+        "group": "31e5291a19a72c92",
+        "format": "rgb",
+        "outformat": "object",
+        "showSwatch": false,
+        "showPicker": true,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "true",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "topic": "home/ligth/rgb",
+        "topicType": "msg",
+        "className": "",
+        "x": 470,
+        "y": 620,
+        "wires": [
+            [
+                "9d7c68e7e218b5a0"
+            ]
+        ]
+    },
+    {
+        "id": "7a58c24ddadf2de6",
+        "type": "mqtt out",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "topic": "home/ligth/rgb",
+        "qos": "2",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "89895e19de20a335",
+        "x": 700,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "96bfd82066626529",
+        "type": "function",
+        "z": "c4fad207f982e03f",
+        "name": "function 3",
+        "func": "if (msg.payload === true) {\n    return {\n        payload: { \"r\": 100, \"g\": 100, \"b\": 100,\"a\":1}, // Mantém a cor selecionada\n        enabled: true // Habilita o color picker\n    };\n} else {\n    return {\n        payload: \"#000000\", // Cor inicial branca\n        enabled: false // Desabilita o color picker\n    };\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 780,
+        "wires": [
+            [
+                "9a234bfbb8a9402b"
+            ]
+        ]
+    },
+    {
+        "id": "4a66f3c8acf2b5bc",
+        "type": "ui_switch",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "label": "QUARTO",
+        "tooltip": "",
+        "group": "31e5291a19a72c92",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 100,
+        "y": 820,
+        "wires": [
+            [
+                "96bfd82066626529"
+            ]
+        ]
+    },
+    {
+        "id": "2056f00d4133ebf5",
+        "type": "inject",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "str",
+        "x": 130,
+        "y": 740,
+        "wires": [
+            [
+                "96bfd82066626529"
+            ]
+        ]
+    },
+    {
+        "id": "9a234bfbb8a9402b",
+        "type": "ui_colour_picker",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "label": "",
+        "group": "31e5291a19a72c92",
+        "format": "rgb",
+        "outformat": "object",
+        "showSwatch": false,
+        "showPicker": true,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "true",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "topic": "home/ligth/rgb",
+        "topicType": "msg",
+        "className": "",
+        "x": 470,
+        "y": 780,
+        "wires": [
+            [
+                "7a58c24ddadf2de6"
+            ]
+        ]
+    },
+    {
         "id": "72cc56167616afdf",
         "type": "ui_dropdown",
         "z": "f37c9f369d824e1f",
@@ -934,16 +988,6 @@
         ]
     },
     {
-        "id": "0ba593b0c16ba944",
-        "type": "comment",
-        "z": "70068137e54b09a8",
-        "name": "FUNÇÃO DE PEGAR TEMPO E ",
-        "info": "FUNÇÃO DE PEGAR TEMPO PARA ATIVAR O AR OU LIGAR AS LUZES",
-        "x": 310,
-        "y": 80,
-        "wires": []
-    },
-    {
         "id": "a66b6f212505f627",
         "type": "mqtt out",
         "z": "70068137e54b09a8",
@@ -957,36 +1001,9 @@
         "correl": "",
         "expiry": "",
         "broker": "89895e19de20a335",
-        "x": 710,
-        "y": 160,
+        "x": 750,
+        "y": 80,
         "wires": []
-    },
-    {
-        "id": "f885c92942f61539",
-        "type": "ui_slider",
-        "z": "70068137e54b09a8",
-        "name": "",
-        "label": "Cooling speed",
-        "tooltip": "",
-        "group": "3bafb5f4d0dd6d9e",
-        "order": 1,
-        "width": "6",
-        "height": "1",
-        "passthru": true,
-        "outs": "end",
-        "topic": "home/cooling",
-        "topicType": "msg",
-        "min": "0",
-        "max": "100",
-        "step": "20",
-        "className": "",
-        "x": 340,
-        "y": 160,
-        "wires": [
-            [
-                "7e2436b9244eff73"
-            ]
-        ]
     },
     {
         "id": "7e2436b9244eff73",
@@ -1000,8 +1017,8 @@
         "round": false,
         "property": "payload",
         "name": "",
-        "x": 520,
-        "y": 160,
+        "x": 580,
+        "y": 80,
         "wires": [
             [
                 "a66b6f212505f627"
@@ -1009,7 +1026,54 @@
         ]
     },
     {
-        "id": "e325bb067942d52f",
+        "id": "6d1cec86902c9aab",
+        "type": "ui_slider",
+        "z": "70068137e54b09a8",
+        "name": "",
+        "label": "slider",
+        "tooltip": "",
+        "group": "3bafb5f4d0dd6d9e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": "10",
+        "className": "",
+        "x": 430,
+        "y": 80,
+        "wires": [
+            [
+                "7e2436b9244eff73"
+            ]
+        ]
+    },
+    {
+        "id": "f1855334c21e3122",
+        "type": "function",
+        "z": "70068137e54b09a8",
+        "name": "function 1",
+        "func": "if (msg.payload === true) {\n    msg.enabled = true;\n    msg.payload = 30;\n} else {\n    msg.enabled = false;\n    msg.payloas = 0;\n}\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 80,
+        "wires": [
+            [
+                "6d1cec86902c9aab"
+            ]
+        ]
+    },
+    {
+        "id": "a0ce0836273646e6",
         "type": "ui_switch",
         "z": "70068137e54b09a8",
         "name": "",
@@ -1021,24 +1085,49 @@
         "height": 0,
         "passthru": true,
         "decouple": "false",
-        "topic": "home/cooling",
+        "topic": "topic",
         "topicType": "msg",
         "style": "",
-        "onvalue": "40",
-        "onvalueType": "num",
+        "onvalue": "true",
+        "onvalueType": "bool",
         "onicon": "",
         "oncolor": "",
-        "offvalue": "0",
-        "offvalueType": "num",
+        "offvalue": "false",
+        "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 170,
-        "y": 160,
+        "x": 130,
+        "y": 120,
         "wires": [
             [
-                "f885c92942f61539"
+                "f1855334c21e3122"
+            ]
+        ]
+    },
+    {
+        "id": "3fe613acf3427a6e",
+        "type": "inject",
+        "z": "70068137e54b09a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "str",
+        "x": 130,
+        "y": 40,
+        "wires": [
+            [
+                "f1855334c21e3122"
             ]
         ]
     }

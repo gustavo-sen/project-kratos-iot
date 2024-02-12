@@ -684,24 +684,5 @@
                 "file": "/data/node_modules/node-red-dashboard/nodes/ui_spacer.js"
             }
         }
-    },
-    "node-red-contrib-ui-iro-color-picker": {
-        "name": "node-red-contrib-ui-iro-color-picker",
-        "version": "0.1.6",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "ui_iro-color-picker": {
-                "name": "ui_iro-color-picker",
-                "types": [
-                    "ui_iro-color-picker"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-contrib-ui-iro-color-picker",
-                "file": "/data/node_modules/node-red-contrib-ui-iro-color-picker/ui-iro-color-picker.js"
-            }
-        }
     }
 }
