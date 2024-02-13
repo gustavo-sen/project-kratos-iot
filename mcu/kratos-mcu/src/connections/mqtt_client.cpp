@@ -1,16 +1,17 @@
 #include <string.h>
-#include <set>
+#include <string>
 #include <type_traits>
-#include <iostream>
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include <WiFi.h>
 #include <PubSubClient.h>
+#include <ArduinoJson.h>
 
 #include "./headers/mqtt_client.hpp"
 #include "./headers/lamp_controller.hpp"
 #include "./headers/fan_controller.hpp"
+#include "./headers/rgb_controller.hpp"
 #include "./headers/door_locker_controller.hpp"
 
 //MQTT
@@ -40,14 +41,21 @@ void callback(char* topic, byte* message, unsigned int length) {
         packageTemp += (char)message[i];
     }
 
-    std::cout << topic;
-
     if(strcmp(topic, "home/lamp") == 0){
         lamp_update(packageTemp, 0);
     }else if(strcmp(topic, "home/cooling") == 0){
-        std::cout << packageTemp;
-        fan_speed(std::stoi(packageTemp));
+          fan_speed(std::stoi(packageTemp));
     }else if(strcmp(topic, "home/security/door/lock") == 0){
+
+    }else if(strcmp(topic, "home/ligth/rgb") == 0){
+        StaticJsonDocument<200> doc;
+        DeserializationError error = deserializeJson(doc, packageTemp);
+
+        uint8_t red = doc["r"];
+        uint8_t green = doc["g"];
+        uint8_t blue = doc["b"];
+
+        set_rgb(red, green, blue);
     }
 
 

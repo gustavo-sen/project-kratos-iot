@@ -1,7 +1,6 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "driver/gpio.h"
-#include <iostream>
 
 #include "headers/wifi_setup.hpp"
 #include "headers/door_sensor_controller.hpp"
@@ -9,7 +8,7 @@
 #include "headers/mqtt_client.hpp"
 #include "headers/lamp_controller.hpp"
 #include "headers/fan_controller.hpp"
-
+#include "headers/rgb_controller.hpp"
 
 void setup() {
     wifiSetup();
@@ -19,6 +18,7 @@ void setup() {
     setup_door_sensor();
     set_up_lockers();
     fan_setup();
+    rgb_setup();
 
 }
 
