@@ -1,0 +1,9 @@
+Manufacturer=Texas Instruments
+PartNumber=SN74HC595N
+PartCategory=Integrated Circuit
+PackageCategory=Dual-In-Line Packages
+PinCount=16
+Version=2.4
+Released=2015-12-30 13:57:14
+Downloaded=2024-02-14 14:07:40
+3D=Y

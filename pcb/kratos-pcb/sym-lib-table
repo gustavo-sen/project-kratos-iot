@@ -3,4 +3,5 @@
   (lib (name "LM317T")(type "KiCad")(uri "${KIPRJMOD}/components/LM317T/LM317T.kicad_sym")(options "")(descr ""))
   (lib (name "ESP32-DEVKIT-V1")(type "KiCad")(uri "${KIPRJMOD}/components/ESP32-DEVKIT-V1/ESP32-DEVKIT-V1.kicad_sym")(options "")(descr ""))
   (lib (name "2N2222A")(type "KiCad")(uri "${KIPRJMOD}/components/2N2222A/2N2222A.kicad_sym")(options "")(descr ""))
+  (lib (name "SN74HC595N")(type "KiCad")(uri "${KIPRJMOD}/components/SN74HC595N/KiCad/SN74HC595N.kicad_sym")(options "")(descr ""))
 )
