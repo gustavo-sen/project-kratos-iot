@@ -238,7 +238,7 @@
         "z": "62947d5f581f77cb",
         "name": "",
         "topic": "join",
-        "qos": "2",
+        "qos": "0",
         "datatype": "utf8",
         "broker": "89895e19de20a335",
         "nl": false,
@@ -359,9 +359,45 @@
         "x": 130,
         "y": 80,
         "wires": [
-            [],
-            []
+            [
+                "2843d81973980486"
+            ],
+            [
+                "1c072927d8694068"
+            ]
         ]
+    },
+    {
+        "id": "2843d81973980486",
+        "type": "debug",
+        "z": "62947d5f581f77cb",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "1c072927d8694068",
+        "type": "debug",
+        "z": "62947d5f581f77cb",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 100,
+        "wires": []
     },
     {
         "id": "33eee9a40f27fc26",
@@ -377,8 +413,8 @@
         "correl": "",
         "expiry": "",
         "broker": "89895e19de20a335",
-        "x": 350,
-        "y": 300,
+        "x": 570,
+        "y": 220,
         "wires": []
     },
     {
@@ -755,135 +791,6 @@
         "wires": [
             [
                 "9d7c68e7e218b5a0"
-            ]
-        ]
-    },
-    {
-        "id": "7a58c24ddadf2de6",
-        "type": "mqtt out",
-        "z": "c4fad207f982e03f",
-        "name": "",
-        "topic": "home/ligth/rgb",
-        "qos": "2",
-        "retain": "false",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "89895e19de20a335",
-        "x": 700,
-        "y": 780,
-        "wires": []
-    },
-    {
-        "id": "96bfd82066626529",
-        "type": "function",
-        "z": "c4fad207f982e03f",
-        "name": "function 3",
-        "func": "if (msg.payload === true) {\n    return {\n        payload: { \"r\": 100, \"g\": 100, \"b\": 100,\"a\":1}, // Mantém a cor selecionada\n        enabled: true // Habilita o color picker\n    };\n} else {\n    return {\n        payload: \"#000000\", // Cor inicial branca\n        enabled: false // Desabilita o color picker\n    };\n}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 280,
-        "y": 780,
-        "wires": [
-            [
-                "9a234bfbb8a9402b"
-            ]
-        ]
-    },
-    {
-        "id": "4a66f3c8acf2b5bc",
-        "type": "ui_switch",
-        "z": "c4fad207f982e03f",
-        "name": "",
-        "label": "QUARTO",
-        "tooltip": "",
-        "group": "31e5291a19a72c92",
-        "order": 4,
-        "width": "0",
-        "height": "0",
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 100,
-        "y": 820,
-        "wires": [
-            [
-                "96bfd82066626529"
-            ]
-        ]
-    },
-    {
-        "id": "2056f00d4133ebf5",
-        "type": "inject",
-        "z": "c4fad207f982e03f",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "str",
-        "x": 130,
-        "y": 740,
-        "wires": [
-            [
-                "96bfd82066626529"
-            ]
-        ]
-    },
-    {
-        "id": "9a234bfbb8a9402b",
-        "type": "ui_colour_picker",
-        "z": "c4fad207f982e03f",
-        "name": "",
-        "label": "",
-        "group": "31e5291a19a72c92",
-        "format": "rgb",
-        "outformat": "object",
-        "showSwatch": false,
-        "showPicker": true,
-        "showValue": false,
-        "showHue": false,
-        "showAlpha": false,
-        "showLightness": true,
-        "square": "false",
-        "dynOutput": "true",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "topic": "home/ligth/rgb",
-        "topicType": "msg",
-        "className": "",
-        "x": 470,
-        "y": 780,
-        "wires": [
-            [
-                "7a58c24ddadf2de6"
             ]
         ]
     },
