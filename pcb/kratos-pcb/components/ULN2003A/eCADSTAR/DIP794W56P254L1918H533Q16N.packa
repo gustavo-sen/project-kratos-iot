@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "ULN2003A"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2022-02-23-04:53:36)
+    (mountForm default
+        (footprintRef "DIP794W56P254L1918H533Q16N")
+        (spec "System")
+    )
+)

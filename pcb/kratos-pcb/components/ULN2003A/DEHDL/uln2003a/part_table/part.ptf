@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'ULN2003A'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT", "TJ", "MTBF", "POWER", "SLOPE", "SUBTYPE", "PACKAGE", "RJA", "VCC_MAX", "VCC_MIN", "IOUT_MAX", "IOUT_MIN", "ICC", "IGND", "RCA", "RJC", "ICCQ", "TECHNOLOGY", "HFE", "VCEO_MAX", "VCEO_MIN";
+{========================================================================================}
+ "STMicroelectronics", "ULN2003A" (!) = "", "DIP794W56P254L1918H533Q16N", "Dual-In-Line Packages", "511-ULN2003A", "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/ULN2003A?qs=FOlmdCx%252BAA1P2avu3tWCRw%3D%3D", "Darlington Array x7 NPN 50V 0.5A PDIP16 STMicroelectronics ULN2003A, 7-element NPN Darlington Transistor Array, 0.5 A 50 V HFE:1000, 16-Pin PDIP", "http://www.st.com/web/en/resource/technical/document/datasheet/CD00001244.pdf", "5.33 mm", "85", "", "", "", "SEVEN DARLINGTON ARRAY NPN THROUGH HOLE", "DIP-16L", "70", "", "", "", "", "500m", "", "", "", "", "CMOS_TTL", "1000", "50", ""
+END_PART
+
+END.

@@ -1,0 +1,9 @@
+Manufacturer=STMicroelectronics
+PartNumber=ULN2003A
+PartCategory=Integrated Circuit
+PackageCategory=Dual-In-Line Packages
+PinCount=16
+Version=4.1
+Released=2015-09-17 10:56:35
+Downloaded=2024-02-15 21:26:34
+3D=Y

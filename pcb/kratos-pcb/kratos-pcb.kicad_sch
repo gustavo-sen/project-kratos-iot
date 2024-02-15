@@ -101,6 +101,40 @@
     )
   )
 
+  (sheet (at 64.77 55.88) (size 41.91 22.86) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 69401ded-7866-4ef1-bcb6-bf59d95b35e9)
+    (property "Sheetname" "Shift Register" (at 64.77 55.1684 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "ioexpantion.kicad_sch" (at 64.77 79.3246 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "kratos-pcb"
+        (path "/12f1b997-8c5f-4ef7-b036-7873ddaba48e" (page "8"))
+      )
+    )
+  )
+
+  (sheet (at 109.22 55.88) (size 40.64 21.59) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid ab0aa194-5f27-4f16-bd8b-12afa764e651)
+    (property "Sheetname" "dht22" (at 109.22 55.1684 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "dht22.kicad_sch" (at 109.22 78.0546 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "kratos-pcb"
+        (path "/12f1b997-8c5f-4ef7-b036-7873ddaba48e" (page "9"))
+      )
+    )
+  )
+
   (sheet (at 19.05 54.61) (size 41.91 25.4) (fields_autoplaced)
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))

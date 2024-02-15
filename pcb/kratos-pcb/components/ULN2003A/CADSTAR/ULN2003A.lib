@@ -1,0 +1,16 @@
+.ULN2003A :1 ;Darlington Array x7 NPN 50V 0.5A PDIP16 STMicroelectronics ULN2003A, 7-element NPN Darlington Transistor Array, 0.5 A 50 V HFE:1000, 16-Pin PDIP
+DIP794W56P254L1918H533Q16N
+*STM IC
+*NGS
+*PLB 1="IN1" 2="IN2" 3="IN3" 4="IN4" 5="IN5" 6="IN6" 7="IN7" 8="GND" 9="COMMON WHEELING FREE DIODES" 10="OUT7" 11="OUT6" 12="OUT5" 13="OUT4" 14="OUT3" 15="OUT2" 16="OUT1"
+*MXP 16
+*DFN ULN2003A
+~!Mouser Part Number (511-ULN2003A)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/STMicroelectronics/ULN2003A?qs=FOlmdCx%252BAA1P2avu3tWCRw%3D%3D)
+~!Manufacturer_Name (STMicroelectronics)
+~!Manufacturer_Part_Number (ULN2003A)
+~!Link Datasheet (http://www.st.com/web/en/resource/technical/document/datasheet/CD00001244.pdf)
+~!Height (5.33mm)
+~!3D_Model (ULN2003A)
+ULN2003A
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 11.1!U 12.1!U 13.1!U 14.1!U 15.1!U 16.1!U 

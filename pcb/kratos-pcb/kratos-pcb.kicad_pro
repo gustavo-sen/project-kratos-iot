@@ -505,6 +505,14 @@
     [
       "bcabd817-9513-4d0c-a70f-0efd675264f1",
       "door lock"
+    ],
+    [
+      "69401ded-7866-4ef1-bcb6-bf59d95b35e9",
+      "Shift Register"
+    ],
+    [
+      "ab0aa194-5f27-4f16-bd8b-12afa764e651",
+      "dht22"
     ]
   ],
   "text_variables": {}
