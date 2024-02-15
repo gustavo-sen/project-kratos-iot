@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'SN74HC595N'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT", "TJ", "MTBF", "POWER", "SLOPE", "SUBTYPE", "PACKAGE", "RJA", "VCC_MAX", "VCC_MIN", "IOUT_MAX", "IOUT_MIN", "ICC", "IGND", "RCA", "RJC", "ICCQ", "TECHNOLOGY";
+{========================================================================================}
+ "Texas Instruments", "SN74HC595N" (!) = "", "DIP794W53P254L1930H508Q16N", "Dual-In-Line Packages", "595-SN74HC595N", "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN74HC595N?qs=IEl3ej0IqwBTHkYa8XPoMQ%3D%3D", "8-Bit Shift Registers With 3-State Output Registers", "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf", "5.08 mm", "150", "", "", "", "SHIFT REGISTER SIPO THROUGH HOLE", "PDIP-16", "67", "7", "-0.5", "70m", "70m", "80u", "", "", "", "", "CMOS"
+END_PART
+
+END.

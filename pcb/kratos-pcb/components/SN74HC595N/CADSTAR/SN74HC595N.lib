@@ -1,0 +1,16 @@
+.SN74HC595N :1 ;8-Bit Shift Registers With 3-State Output Registers
+DIP794W53P254L1930H508Q16N
+*STM IC
+*NGS
+*PLB 1="QB" 2="QC" 3="QD" 4="QE" 5="QF" 6="QG" 7="QH_1" 8="GND" 9="QH_2" 10="'SRCLR'" 11="SRCLK" 12="RCLK" 13="'OE'" 14="SER" 15="QA" 16="VCC"
+*MXP 16
+*DFN SN74HC595N
+~!Mouser Part Number (595-SN74HC595N)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN74HC595N?qs=IEl3ej0IqwBTHkYa8XPoMQ%3D%3D)
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (SN74HC595N)
+~!Link Datasheet (http://www.ti.com/lit/ds/symlink/sn74hc595.pdf)
+~!Height (5.08mm)
+~!3D_Model (SN74HC595N)
+SN74HC595N
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!G 16.1!P 15.1!U 14.1!U 13.1!U 12.1!I 11.1!I 10.1!U 9.1!U 

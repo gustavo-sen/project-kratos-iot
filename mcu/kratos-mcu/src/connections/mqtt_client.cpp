@@ -1,7 +1,6 @@
 #include <string.h>
-#include <set>
+#include <string>
 #include <type_traits>
-#include <iostream>
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -9,15 +8,14 @@
 #include <PubSubClient.h>
 
 #include "./headers/mqtt_client.hpp"
-#include "./headers/lamp_controller.hpp"
-#include "./headers/fan_controller.hpp"
-#include "./headers/door_locker_controller.hpp"
+#include "./headers/callback_mqtt.hpp"
 
 //MQTT
 const char* MAIN_TOPIC = "home/";
 const char* CLIENT_ID = "esp32-client";
 const char* MQTT_USER = "admin";
 const char* MQTT_PASS = "admin";
+
 //const char* MQTT_SERVER = "172.18.9.95";
 const char* MQTT_SERVER = "10.0.0.221";
 const char* MQTT_PORT = "1883";
@@ -40,16 +38,7 @@ void callback(char* topic, byte* message, unsigned int length) {
         packageTemp += (char)message[i];
     }
 
-    std::cout << topic;
-
-    if(strcmp(topic, "home/lamp") == 0){
-        lamp_update(packageTemp, 0);
-    }else if(strcmp(topic, "home/cooling") == 0){
-        std::cout << packageTemp;
-        fan_speed(std::stoi(packageTemp));
-    }else if(strcmp(topic, "home/security/door/lock") == 0){
-    }
-
+    update(topic, packageTemp);
 
 }
 
@@ -68,7 +57,6 @@ void mqtt_publish(const char* topic, const char* payload){
 void mqtt_subcribe(const char* topic){
     char* topicoCompleto = new char[strlen(MAIN_TOPIC) + strlen(topic) + 1];
     
-    // Copia MAIN_TOPIC para topicoCompleto
     strcpy(topicoCompleto, MAIN_TOPIC);
     strcat(topicoCompleto, topic);
     

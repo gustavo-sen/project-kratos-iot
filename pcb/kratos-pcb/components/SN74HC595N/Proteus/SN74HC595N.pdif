@@ -1,0 +1,199 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "SN74HC595N"
+   (description "8-Bit Shift Registers With 3-State Output Registers")
+   (family "ANA")
+   (package "DIP794W53P254L1930H508Q16N")
+   (attribute "Datasheet Link" "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf")
+   (attribute "Geometry.Height" "5.08mm")
+   (attribute "Mouser Part Number" "595-SN74HC595N")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN74HC595N?qs=IEl3ej0IqwBTHkYa8XPoMQ%3D%3D")
+   (attribute "Manufacturer_Name" "Texas Instruments")
+   (attribute "Manufacturer_Part_Number" "SN74HC595N")
+   (gate
+    (symbol "SN74HC595N")
+    (pin "QB" 1 PS)
+    (pin "QC" 2 PS)
+    (pin "QD" 3 PS)
+    (pin "QE" 4 PS)
+    (pin "QF" 5 PS)
+    (pin "QG" 6 PS)
+    (pin "QH_1" 7 PS)
+    (pin "GND" 8 PP)
+    (pin "VCC" 16 PP)
+    (pin "QA" 15 PS)
+    (pin "SER" 14 PS)
+    (pin "$OE$" 13 PS)
+    (pin "RCLK" 12 IP)
+    (pin "SRCLK" 11 IP)
+    (pin "$SRCLR$" 10 PS)
+    (pin "QH_2" 9 PS)
+   )
+  )
+  (symbol "SN74HC595N"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 1000 100) (pt 1000 -800) (pt 200 -800) (pt 200 100) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -200) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -300) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -400) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -500) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -600) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -700) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 -100) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 -200) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 -300) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 -400) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 -500) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 -600) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 -700) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "DIP794W53P254L1930H508Q16N"
+   (units MM)
+   (layer OCCA
+    (graphic
+     (stroke 0.05)
+     (path
+      (closed true)
+      (pt -4.945 10.095)
+      (pt 4.945 10.095)
+      (pt 4.945 -10.095)
+      (pt -4.945 -10.095)
+      (pt -4.945 10.095))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -3.3 9.845)
+      (pt 3.3 9.845)
+      (pt 3.3 -9.845)
+      (pt -3.3 -9.845)
+      (pt -3.3 9.845))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -3.3 8.575)
+      (pt -2.03 9.845))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -4.535 9.845)
+      (pt 3.3 9.845))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -3.3 -9.845)
+      (pt 3.3 -9.845))))
+   (leg 1 (pt -3.97 8.89) (padstack 1))
+   (leg 2 (pt -3.97 6.35) (padstack 0))
+   (leg 3 (pt -3.97 3.81) (padstack 0))
+   (leg 4 (pt -3.97 1.27) (padstack 0))
+   (leg 5 (pt -3.97 -1.27) (padstack 0))
+   (leg 6 (pt -3.97 -3.81) (padstack 0))
+   (leg 7 (pt -3.97 -6.35) (padstack 0))
+   (leg 8 (pt -3.97 -8.89) (padstack 0))
+   (leg 9 (pt 3.97 -8.89) (padstack 0))
+   (leg 10 (pt 3.97 -6.35) (padstack 0))
+   (leg 11 (pt 3.97 -3.81) (padstack 0))
+   (leg 12 (pt 3.97 -1.27) (padstack 0))
+   (leg 13 (pt 3.97 1.27) (padstack 0))
+   (leg 14 (pt 3.97 3.81) (padstack 0))
+   (leg 15 (pt 3.97 6.35) (padstack 0))
+   (leg 16 (pt 3.97 8.89) (padstack 0))
+   (padstack 0
+    (hole 0.73)
+    (plated true)
+    (pad (layer TCOP) (round 1.13))
+    (pad (layer INNER) (round 1.13))
+    (pad (layer BCOP) (round 1.13))
+   )
+   (padstack 1
+    (hole 0.73)
+    (plated true)
+    (pad (layer TCOP) (square 1.13))
+    (pad (layer INNER) (round 1.13))
+    (pad (layer BCOP) (square 1.13))
+   )
+   (model "SN74HC595N.stp"
+    (euler 90 0 0)
+    (offset 0 0 2.4700000286102295)
+   )
+  )
+ )
+)

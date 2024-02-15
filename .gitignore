@@ -1,7 +1,3 @@
-
-
-*.backup
-*.zip
 .npm
 .backup
 /service/Docker/compose/node-red-data/.npm

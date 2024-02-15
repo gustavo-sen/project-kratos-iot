@@ -1,4 +1,7 @@
 #pragma once
+
+#include <string>
+
 #include "driver/gpio.h"
 
 typedef enum {
@@ -8,3 +11,4 @@ typedef enum {
 
 void set_up_lockers();
 void set_door_lock(DoorLocket door, bool isToSet);
+void update_door_lock(std::string& packetStr);
