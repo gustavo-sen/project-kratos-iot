@@ -1350,6 +1350,63 @@
         ]
     },
     {
+        "id": "a64cef838a70b072",
+        "type": "mqtt in",
+        "z": "f37c9f369d824e1f",
+        "name": "",
+        "topic": "home/sensor/door/porta_1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "89895e19de20a335",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 380,
+        "wires": [
+            [
+                "04f04615afed3e43",
+                "6e36de3bd504b4a1"
+            ]
+        ]
+    },
+    {
+        "id": "04f04615afed3e43",
+        "type": "ui_toast",
+        "z": "f37c9f369d824e1f",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 440,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "6e36de3bd504b4a1",
+        "type": "debug",
+        "z": "f37c9f369d824e1f",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 460,
+        "wires": []
+    },
+    {
         "id": "a66b6f212505f627",
         "type": "mqtt out",
         "z": "70068137e54b09a8",
@@ -1533,7 +1590,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 560,
-        "y": 220,
+        "y": 280,
         "wires": [
             []
         ]
@@ -1552,11 +1609,10 @@
         "rh": 0,
         "inputs": 0,
         "x": 120,
-        "y": 240,
+        "y": 300,
         "wires": [
             [
                 "127d46e026772f3e",
-                "179587ab797980c5",
                 "b15f3fe6b9524ddf"
             ]
         ]
@@ -1574,7 +1630,7 @@
         "finalize": "",
         "libs": [],
         "x": 360,
-        "y": 220,
+        "y": 280,
         "wires": [
             [
                 "342a78aa5fec7e02",
@@ -1604,7 +1660,7 @@
         "step": 1,
         "className": "",
         "x": 610,
-        "y": 260,
+        "y": 320,
         "wires": [
             []
         ]
@@ -1651,23 +1707,6 @@
         ]
     },
     {
-        "id": "179587ab797980c5",
-        "type": "debug",
-        "z": "70068137e54b09a8",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 300,
-        "y": 380,
-        "wires": []
-    },
-    {
         "id": "b15f3fe6b9524ddf",
         "type": "function",
         "z": "70068137e54b09a8",
@@ -1680,7 +1719,7 @@
         "finalize": "",
         "libs": [],
         "x": 360,
-        "y": 300,
+        "y": 360,
         "wires": [
             [
                 "68f32e7a821cfc1b"
@@ -1712,7 +1751,7 @@
         "diff": false,
         "className": "",
         "x": 530,
-        "y": 180,
+        "y": 240,
         "wires": []
     },
     {
@@ -1740,7 +1779,7 @@
         "diff": false,
         "className": "",
         "x": 520,
-        "y": 300,
+        "y": 360,
         "wires": []
     }
 ]
