@@ -1,13 +1,11 @@
 #pragma once
 #include "driver/gpio.h"
 
-typedef enum{
-    DOOR1 = GPIO_NUM_27,
-    DOOR2 = GPIO_NUM_14
-} Door;
+struct DoorStruct{
+    bool lastStatus;
+    gpio_num_t gpio;
+} ;
 
 void setup_door_sensor();
-bool sensorStatus();
-bool sensorStatus(Door door);
+bool sensorStatus(DoorStruct door);
 
-    

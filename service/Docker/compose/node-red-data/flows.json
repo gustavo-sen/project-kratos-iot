@@ -292,6 +292,15 @@
         "height": 1
     },
     {
+        "id": "1ff1c9fa3da5ad76",
+        "type": "ui_group",
+        "name": "Group 3",
+        "tab": "7426176b38d2a214",
+        "order": 3,
+        "disp": true,
+        "width": 6
+    },
+    {
         "id": "c1ebf1a0d06f37b4",
         "type": "mqtt in",
         "z": "62947d5f581f77cb",
@@ -1501,9 +1510,9 @@
         "interpolate": "linear",
         "nodata": "",
         "dot": false,
-        "ymin": "-30",
-        "ymax": "50",
-        "removeOlder": 1,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
         "removeOlderPoints": "10",
         "removeOlderUnit": "60",
         "cutout": 0,
@@ -1534,7 +1543,7 @@
         "type": "mqtt in",
         "z": "70068137e54b09a8",
         "name": "",
-        "topic": "home/sensor/temperature",
+        "topic": "home/sensor/dhtsensor",
         "qos": "0",
         "datatype": "utf8",
         "broker": "89895e19de20a335",
@@ -1542,12 +1551,13 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 130,
+        "x": 120,
         "y": 240,
         "wires": [
             [
                 "127d46e026772f3e",
-                "179587ab797980c5"
+                "179587ab797980c5",
+                "b15f3fe6b9524ddf"
             ]
         ]
     },
@@ -1556,7 +1566,7 @@
         "type": "function",
         "z": "70068137e54b09a8",
         "name": "function 3",
-        "func": "let newPayload = parseInt(msg.payload);\nmsg.payload = newPayload;\nreturn msg;",
+        "func": "let data = JSON.parse(msg.payload);\nlet temperature = parseFloat(data.temperature).toFixed(2);\n\nlet newMsg = {\n    payload: temperature\n};\n\nreturn newMsg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1564,11 +1574,12 @@
         "finalize": "",
         "libs": [],
         "x": 360,
-        "y": 240,
+        "y": 220,
         "wires": [
             [
                 "342a78aa5fec7e02",
-                "08e92d7f5702cc5f"
+                "08e92d7f5702cc5f",
+                "1d4f4f6eb303dece"
             ]
         ]
     },
@@ -1648,11 +1659,88 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 380,
-        "y": 340,
+        "x": 300,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "b15f3fe6b9524ddf",
+        "type": "function",
+        "z": "70068137e54b09a8",
+        "name": "function 9",
+        "func": "let data = JSON.parse(msg.payload);\nlet relative_humidity = parseFloat(data.relative_humidity).toFixed(2);\n\nlet newMsg = {\n    payload: relative_humidity\n};\n\nreturn newMsg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 300,
+        "wires": [
+            [
+                "68f32e7a821cfc1b"
+            ]
+        ]
+    },
+    {
+        "id": "1d4f4f6eb303dece",
+        "type": "ui_gauge",
+        "z": "70068137e54b09a8",
+        "name": "",
+        "group": "3bafb5f4d0dd6d9e",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 530,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "68f32e7a821cfc1b",
+        "type": "ui_gauge",
+        "z": "70068137e54b09a8",
+        "name": "",
+        "group": "1ff1c9fa3da5ad76",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Umidade",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 520,
+        "y": 300,
         "wires": []
     }
 ]
