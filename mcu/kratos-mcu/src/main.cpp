@@ -3,7 +3,7 @@
 #include "driver/gpio.h"
 
 #include "headers/wifi_setup.hpp"
-#include "headers/door_sensor_controller.hpp"
+#include "./headers/door_sensor.hpp"
 #include "headers/door_locker_controller.hpp"  
 #include "headers/mqtt_client.hpp"
 #include "headers/lamp_controller.hpp"
@@ -32,13 +32,12 @@ void setup() {
 
 void loop() {
     mqtt_client_callback_task();
-
 }
 
 void doorSensorTask(void *pvParameters) {
     while (true) {
-        sensorStatus(doorSensor1);
-        sensorStatus(doorSensor2);
+        doorSensorStatus(doorSensor1);
+        doorSensorStatus(doorSensor2);
         vTaskDelay(pdMS_TO_TICKS(2000));
     }
 }
@@ -48,7 +47,6 @@ void task3(void *pvParameters){
         updateSensorDHT();
         vTaskDelay(pdMS_TO_TICKS(6000));
     }
-    
 }
 
 

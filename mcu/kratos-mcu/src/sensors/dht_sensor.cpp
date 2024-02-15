@@ -31,7 +31,7 @@ void updateSensorDHT(){
     if (!isnan(humidity_event.temperature)) {
         doc["relative_humidity"] = humidity_event.relative_humidity;
     }
+
     serializeJson(doc, jsonString);
     mqtt_publish("home/sensor/dhtsensor", jsonString.c_str());
-
 }

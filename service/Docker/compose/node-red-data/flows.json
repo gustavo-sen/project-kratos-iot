@@ -1407,6 +1407,28 @@
         "wires": []
     },
     {
+        "id": "8314d23c489953f6",
+        "type": "mqtt in",
+        "z": "f37c9f369d824e1f",
+        "name": "",
+        "topic": "home/sensor/door/porta_2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "89895e19de20a335",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 460,
+        "wires": [
+            [
+                "04f04615afed3e43",
+                "6e36de3bd504b4a1"
+            ]
+        ]
+    },
+    {
         "id": "a66b6f212505f627",
         "type": "mqtt out",
         "z": "70068137e54b09a8",

@@ -1354,7 +1354,7 @@
         "type": "mqtt in",
         "z": "f37c9f369d824e1f",
         "name": "",
-        "topic": "home/sensor/door/porta1",
+        "topic": "home/sensor/door/porta_1",
         "qos": "2",
         "datatype": "auto-detect",
         "broker": "89895e19de20a335",

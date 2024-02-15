@@ -8,9 +8,9 @@ struct DoorStruct{
     std::string name;
 };
 
-extern DoorStruct doorSensor1; // Declare as extern
-extern DoorStruct doorSensor2; // Declare as extern
+extern DoorStruct doorSensor1;
+extern DoorStruct doorSensor2; 
 
 void setup_door_sensor();
-bool sensorStatus(DoorStruct door);
+void doorSensorStatus(DoorStruct door);
 
