@@ -28,10 +28,15 @@ void lamp_update(std::string& packetStr, const char& lampNum){
 
     int lampNumber = doc["lampNumber"];
     bool isOn = doc["isOn"];
+    std::string lampName = doc["name"];
 
     if(isOn){
         gpio_set_level(lampsPort[lampNumber], 0);
     }else{
         gpio_set_level(lampsPort[lampNumber], 1);
     }    
+
+    std::string message = "Lamp " + lampName + " was turned " + (isOn ? "on" : "off");
+
+    mqtt_publish("status", message.c_str());
 }
