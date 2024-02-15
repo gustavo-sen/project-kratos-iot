@@ -1,8 +1,5 @@
 *.backup
 *.zip
-service/Docker/compose/node-red-data/.flows.json.backup
-service/Docker/compose/node-red-data/.backup
 pcb/kratos-pcb/_autosave-kratos-pcb.kicad_pcb
 pcb/kratos-pcb/~_autosave-kratos-pcb.kicad_pcb.lck
 .backup
-/service/Docker/compose/node-red-data/.npm
