@@ -10,10 +10,12 @@
 #include "headers/fan_controller.hpp"
 #include "headers/rgb_controller.hpp"
 #include "headers/dht_sensor.hpp"
+#include "headers/shift_register_controller.hpp"
 
 void doorSensorTask(void *pvParameters);
-void task2(void *pvParameters);
 void task3(void *pvParameters);
+
+bool test = true;
 
 void setup() {
     wifiSetup();
@@ -25,6 +27,7 @@ void setup() {
     fan_setup();
     rgb_setup();
     sensor_dht_setup();
+    setupShiftRegister();
 
     xTaskCreatePinnedToCore(doorSensorTask, "Door Sensor", 2048, NULL, 1, NULL, 1);
     xTaskCreatePinnedToCore(task3, "Task3", 8000, NULL, 2, NULL, 1);
