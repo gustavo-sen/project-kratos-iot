@@ -7,7 +7,7 @@
 #include "./headers/lamp_controller.hpp"
 #include "./headers/mqtt_client.hpp"
 
-const gpio_num_t lampsPort[] = {GPIO_NUM_18, GPIO_NUM_19, GPIO_NUM_21};
+const gpio_num_t lampsPort[] = {GPIO_NUM_13, GPIO_NUM_19, GPIO_NUM_21};
 
 void setup_lamp(){
     mqtt_subcribe("lamp");
