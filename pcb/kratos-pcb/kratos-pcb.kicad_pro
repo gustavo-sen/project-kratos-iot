@@ -484,35 +484,31 @@
     ],
     [
       "170159aa-55fb-4081-b17a-e6a087b2344c",
-      "power"
+      "POWER SUPPLY"
     ],
     [
       "6278edd7-c4ea-4e2d-a20d-bed0b1d88716",
       "MCU"
     ],
     [
-      "31c82e21-5a03-40d0-b7df-3b432d5f8d2a",
-      "rgb"
-    ],
-    [
       "40f2ff16-84bd-4283-bb2c-5258389cef5b",
-      "fan"
+      "FAN"
     ],
     [
       "4443c0c9-e781-4ba2-81ba-b0b59780290a",
-      "door_sensor"
+      "SDOOR"
     ],
     [
       "bcabd817-9513-4d0c-a70f-0efd675264f1",
-      "door lock"
+      "LOCKER"
     ],
     [
       "69401ded-7866-4ef1-bcb6-bf59d95b35e9",
-      "Shift Register"
+      "EXPANSION DRIVERS"
     ],
     [
       "ab0aa194-5f27-4f16-bd8b-12afa764e651",
-      "dht22"
+      "DHT22-SENSOR"
     ]
   ],
   "text_variables": {}

@@ -6,4 +6,5 @@
   (lib (name "SN74HC595N")(type "KiCad")(uri "${KIPRJMOD}/components/SN74HC595N/KiCad")(options "")(descr ""))
   (lib (name "ULN2003")(type "KiCad")(uri "${KIPRJMOD}/components/ULN2003A/KiCad")(options "")(descr ""))
   (lib (name "DHT22")(type "KiCad")(uri "${KIPRJMOD}/components/DHT22")(options "")(descr ""))
+  (lib (name "ULN2803A")(type "KiCad")(uri "${KIPRJMOD}/components/ULN2803A")(options "")(descr ""))
 )
