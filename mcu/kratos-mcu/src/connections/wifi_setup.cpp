@@ -1,10 +1,10 @@
 #include "./headers/wifi_setup.hpp"
 #include <WiFi.h>
 
-char ssid[] = "VORTEX";
-char password[] = "pprKN@Fv";
-// char ssid[] = "Home";
-// char password[] = "ioyjq89652";
+//char ssid[] = "VORTEX";
+//char password[] = "pprKN@Fv";
+char ssid[] = "Home";
+char password[] = "ioyjq89652";
 
 void wifiSetup(){
     gpio_set_direction(GPIO_NUM_2, GPIO_MODE_OUTPUT);

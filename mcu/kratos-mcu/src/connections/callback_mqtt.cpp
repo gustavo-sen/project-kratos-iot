@@ -36,16 +36,6 @@ void update(char* topic, std::string packageTemp){
 
         //set_rgb(red, green, blue);
     
-    }else if(strcmp(topic, "home/ligth/rgb/sala") == 0){
-        ArduinoJson::V703PB2::StaticJsonDocument<200> jsonDoc;
-        DeserializationError error = deserializeJson(jsonDoc, packageTemp);
-
-        uint8_t red = jsonDoc["r"];
-        uint8_t green = jsonDoc["g"];
-        uint8_t blue = jsonDoc["b"];
-
-        //set_rgb(red, green, blue);
-        
     }
 
 }

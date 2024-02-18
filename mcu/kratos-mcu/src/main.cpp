@@ -15,8 +15,6 @@
 void doorSensorTask(void *pvParameters);
 void task3(void *pvParameters);
 
-bool test = true;
-
 void setup() {
     wifiSetup();
     mqtt_setup();  
@@ -35,10 +33,6 @@ void setup() {
 
 void loop() {
     mqtt_client_callback_task();
-    setBit(B11111111,true);  
-    delay(500);
-    setBit(B00000000,true);
-    delay(500);
 }
 
 void doorSensorTask(void *pvParameters) {
