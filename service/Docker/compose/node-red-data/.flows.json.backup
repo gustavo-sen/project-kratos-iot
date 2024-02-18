@@ -166,14 +166,14 @@
         "type": "ui_tab",
         "name": "Temperature",
         "icon": "dashboard",
-        "order": 2,
+        "order": 3,
         "disabled": false,
         "hidden": false
     },
     {
         "id": "0fc7b11b032ba303",
         "type": "ui_group",
-        "name": "Lampadas",
+        "name": "Lampadas Gerais",
         "tab": "5911a32f8c4a19e4",
         "order": 1,
         "disp": true,
@@ -184,7 +184,7 @@
     {
         "id": "6a9428c91ab8b217",
         "type": "ui_group",
-        "name": "Security",
+        "name": "Entrada 2",
         "tab": "ed955c3abd5fad2e",
         "order": 2,
         "disp": true,
@@ -215,22 +215,81 @@
     {
         "id": "5911a32f8c4a19e4",
         "type": "ui_tab",
-        "name": "Ligth",
+        "name": "Iluminação Geral",
         "icon": "dashboard",
-        "order": 3,
+        "order": 1,
         "disabled": false,
         "hidden": false
     },
     {
-        "id": "31e5291a19a72c92",
+        "id": "fa42c91cfff92338",
         "type": "ui_group",
-        "name": "LEDs",
-        "tab": "5911a32f8c4a19e4",
+        "name": "Suíte",
+        "tab": "2b710414a9696ab7",
         "order": 2,
         "disp": true,
         "width": "6",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "2d5befcb7783d100",
+        "type": "ui_group",
+        "name": "Sala",
+        "tab": "a2693138a548ed14",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2b710414a9696ab7",
+        "type": "ui_tab",
+        "name": "Suite",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f5e5857d7641453a",
+        "type": "ui_group",
+        "name": "Entrada 1",
+        "tab": "ed955c3abd5fad2e",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a2693138a548ed14",
+        "type": "ui_tab",
+        "name": "Sala",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c170da322eb935c7",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "7426176b38d2a214",
+        "order": 2,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "258a13c4da54a180",
+        "type": "ui_spacer",
+        "z": "62947d5f581f77cb",
+        "name": "spacer",
+        "group": "c170da322eb935c7",
+        "order": 2,
+        "width": 1,
+        "height": 1
     },
     {
         "id": "c1ebf1a0d06f37b4",
@@ -268,77 +327,9 @@
         "className": "",
         "topic": "casa",
         "name": "Notification",
-        "x": 310,
+        "x": 270,
         "y": 140,
         "wires": []
-    },
-    {
-        "id": "b24eca4640c7fe93",
-        "type": "ui_ui_control",
-        "z": "62947d5f581f77cb",
-        "name": "",
-        "events": "all",
-        "x": 300,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3f715dbac0af8392",
-        "type": "ui_button",
-        "z": "62947d5f581f77cb",
-        "name": "",
-        "group": "3bafb5f4d0dd6d9e",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Ligth",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "{\"group\":{\"hide\":[\"Security\"],\"show\":[\"Ligth\"]}}",
-        "payloadType": "json",
-        "topic": "payload",
-        "topicType": "msg",
-        "x": 90,
-        "y": 300,
-        "wires": [
-            [
-                "b24eca4640c7fe93"
-            ]
-        ]
-    },
-    {
-        "id": "6290c934432d30f7",
-        "type": "ui_button",
-        "z": "62947d5f581f77cb",
-        "name": "",
-        "group": "3bafb5f4d0dd6d9e",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Security",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "{\"group\":{\"hide\":[\"Ligth\"],\"show\":[\"Security\"]}}",
-        "payloadType": "json",
-        "topic": "payload",
-        "topicType": "msg",
-        "x": 100,
-        "y": 260,
-        "wires": [
-            [
-                "b24eca4640c7fe93"
-            ]
-        ]
     },
     {
         "id": "c2ce2ba782e2fbca",
@@ -359,26 +350,69 @@
         "x": 130,
         "y": 80,
         "wires": [
-            [
-                "2843d81973980486"
-            ],
+            [],
             []
         ]
     },
     {
-        "id": "2843d81973980486",
-        "type": "debug",
+        "id": "92fa4a7e27edf390",
+        "type": "mqtt in",
         "z": "62947d5f581f77cb",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 360,
-        "y": 60,
+        "name": "",
+        "topic": "status",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "89895e19de20a335",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 200,
+        "wires": [
+            [
+                "a9f7286c5b429cc1"
+            ]
+        ]
+    },
+    {
+        "id": "bd85c7799015bc54",
+        "type": "mqtt in",
+        "z": "62947d5f581f77cb",
+        "name": "",
+        "topic": "home/sensor/door/porta1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "89895e19de20a335",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "1391c03f44353b3c"
+            ]
+        ]
+    },
+    {
+        "id": "1391c03f44353b3c",
+        "type": "ui_toast",
+        "z": "62947d5f581f77cb",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "casa",
+        "name": "Notification",
+        "x": 390,
+        "y": 280,
         "wires": []
     },
     {
@@ -395,8 +429,8 @@
         "correl": "",
         "expiry": "",
         "broker": "89895e19de20a335",
-        "x": 570,
-        "y": 220,
+        "x": 370,
+        "y": 180,
         "wires": []
     },
     {
@@ -404,10 +438,10 @@
         "type": "ui_switch",
         "z": "c4fad207f982e03f",
         "name": "",
-        "label": "Lamp 2",
+        "label": "Banheiro",
         "tooltip": "",
         "group": "0fc7b11b032ba303",
-        "order": 3,
+        "order": 1,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -415,18 +449,18 @@
         "topic": "home/lamp",
         "topicType": "str",
         "style": "",
-        "onvalue": "{\"lampNumber\":1,\"isOn\":true}",
+        "onvalue": "{\"lampNumber\":1,\"isOn\":true,\"name\":\"banheiro\"}",
         "onvalueType": "json",
         "onicon": "",
         "oncolor": "",
-        "offvalue": "{     \"lampNumber\": 1,     \"isOn\": false }",
+        "offvalue": "{\"lampNumber\":1,\"isOn\":false,\"name\":\"banheiro\"}",
         "offvalueType": "json",
         "officon": "",
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 100,
-        "y": 180,
+        "x": 180,
+        "y": 100,
         "wires": [
             [
                 "33eee9a40f27fc26"
@@ -438,10 +472,10 @@
         "type": "ui_switch",
         "z": "c4fad207f982e03f",
         "name": "",
-        "label": "Lamp 3",
+        "label": "Lamp SUITE",
         "tooltip": "",
-        "group": "0fc7b11b032ba303",
-        "order": 4,
+        "group": "fa42c91cfff92338",
+        "order": 1,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -449,18 +483,18 @@
         "topic": "home/lamp",
         "topicType": "str",
         "style": "",
-        "onvalue": "{\"lampNumber\":2,\"isOn\":true}",
+        "onvalue": "{\"lampNumber\":2,\"isOn\":true,\"name\":\"suite\"}",
         "onvalueType": "json",
         "onicon": "",
         "oncolor": "",
-        "offvalue": "{     \"lampNumber\": 2,     \"isOn\": false }",
+        "offvalue": "{\"lampNumber\":2,\"isOn\":false,\"name\":\"suite\"}",
         "offvalueType": "json",
         "officon": "",
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 100,
-        "y": 240,
+        "x": 170,
+        "y": 140,
         "wires": [
             [
                 "33eee9a40f27fc26"
@@ -472,10 +506,10 @@
         "type": "ui_switch",
         "z": "c4fad207f982e03f",
         "name": "",
-        "label": "Sala",
+        "label": "Luz principal",
         "tooltip": "",
-        "group": "0fc7b11b032ba303",
-        "order": 2,
+        "group": "2d5befcb7783d100",
+        "order": 1,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -483,18 +517,18 @@
         "topic": "home/lamp",
         "topicType": "str",
         "style": "",
-        "onvalue": "{\"lampNumber\":0,\"isOn\":true}",
+        "onvalue": "{\"lampNumber\":0,\"isOn\":true,\"name\":\"sala\"}",
         "onvalueType": "json",
         "onicon": "",
         "oncolor": "",
-        "offvalue": "{     \"lampNumber\": 0,     \"isOn\": false }",
+        "offvalue": "{\"lampNumber\":0,\"isOn\":false,\"name\":\"sala\"}",
         "offvalueType": "json",
         "officon": "",
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 90,
-        "y": 120,
+        "x": 170,
+        "y": 60,
         "wires": [
             [
                 "33eee9a40f27fc26"
@@ -515,8 +549,8 @@
         "correl": "",
         "expiry": "",
         "broker": "89895e19de20a335",
-        "x": 700,
-        "y": 620,
+        "x": 660,
+        "y": 460,
         "wires": []
     },
     {
@@ -535,18 +569,18 @@
         "topic": "home/lamp",
         "topicType": "str",
         "style": "",
-        "onvalue": "{\"lampNumber\":1,\"isOn\":true}",
+        "onvalue": "{\"lampNumber\":4,\"isOn\":true,\"name\":\"lampada 2\"}",
         "onvalueType": "json",
         "onicon": "",
         "oncolor": "",
-        "offvalue": "{     \"lampNumber\": 1,     \"isOn\": false }",
+        "offvalue": "{\"lampNumber\":4,\"isOn\":false,\"name\":\"lampada 2\"}",
         "offvalueType": "json",
         "officon": "",
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 100,
-        "y": 360,
+        "x": 180,
+        "y": 220,
         "wires": [
             [
                 "33eee9a40f27fc26"
@@ -569,18 +603,18 @@
         "topic": "home/lamp",
         "topicType": "str",
         "style": "",
-        "onvalue": "{\"lampNumber\":2,\"isOn\":true}",
+        "onvalue": "{\"lampNumber\":5,\"isOn\":true,\"name\":\"lampada 3\"}",
         "onvalueType": "json",
         "onicon": "",
         "oncolor": "",
-        "offvalue": "{     \"lampNumber\": 2,     \"isOn\": false }",
+        "offvalue": "{\"lampNumber\":5,\"isOn\":false,\"name\":\"lampada 3\"}",
         "offvalueType": "json",
         "officon": "",
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 100,
-        "y": 420,
+        "x": 180,
+        "y": 260,
         "wires": [
             [
                 "33eee9a40f27fc26"
@@ -603,18 +637,18 @@
         "topic": "home/lamp",
         "topicType": "str",
         "style": "",
-        "onvalue": "{\"lampNumber\":0,\"isOn\":true}",
+        "onvalue": "{\"lampNumber\":3,\"isOn\":true,\"name\":\"lampada 1\"}",
         "onvalueType": "json",
         "onicon": "",
         "oncolor": "",
-        "offvalue": "{     \"lampNumber\": 0,     \"isOn\": false }",
+        "offvalue": "{\"lampNumber\":3,\"isOn\":false,\"name\":\"lampada 1\"}",
         "offvalueType": "json",
         "officon": "",
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 100,
-        "y": 300,
+        "x": 180,
+        "y": 180,
         "wires": [
             [
                 "33eee9a40f27fc26"
@@ -629,7 +663,7 @@
         "label": "Lamp 4",
         "tooltip": "",
         "group": "0fc7b11b032ba303",
-        "order": 4,
+        "order": 5,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -637,33 +671,23 @@
         "topic": "home/lamp",
         "topicType": "str",
         "style": "",
-        "onvalue": "{\"lampNumber\":3,\"isOn\":true}",
+        "onvalue": "{\"lampNumber\":6,\"isOn\":true,\"name\":\"lampada 4\"}",
         "onvalueType": "json",
         "onicon": "",
         "oncolor": "",
-        "offvalue": "{     \"lampNumber\": 3,     \"isOn\": false }",
+        "offvalue": "{\"lampNumber\":6,\"isOn\":false,\"name\":\"lampada 4\"}",
         "offvalueType": "json",
         "officon": "",
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 100,
-        "y": 480,
+        "x": 180,
+        "y": 300,
         "wires": [
             [
                 "33eee9a40f27fc26"
             ]
         ]
-    },
-    {
-        "id": "c9bc45c16b5a48dc",
-        "type": "comment",
-        "z": "c4fad207f982e03f",
-        "name": "corrigir nomenclaturas",
-        "info": "",
-        "x": 380,
-        "y": 200,
-        "wires": []
     },
     {
         "id": "b00fa90491e4f80e",
@@ -677,8 +701,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 280,
-        "y": 620,
+        "x": 300,
+        "y": 460,
         "wires": [
             [
                 "ee9d44a73c9c9a4d"
@@ -692,11 +716,11 @@
         "name": "",
         "label": "SUITE-LED",
         "tooltip": "",
-        "group": "31e5291a19a72c92",
-        "order": 1,
+        "group": "fa42c91cfff92338",
+        "order": 2,
         "width": "0",
         "height": "0",
-        "passthru": true,
+        "passthru": false,
         "decouple": "false",
         "topic": "topic",
         "topicType": "msg",
@@ -711,8 +735,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 110,
-        "y": 660,
+        "x": 130,
+        "y": 500,
         "wires": [
             [
                 "b00fa90491e4f80e"
@@ -736,8 +760,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "str",
-        "x": 130,
-        "y": 580,
+        "x": 150,
+        "y": 420,
         "wires": [
             [
                 "b00fa90491e4f80e"
@@ -750,7 +774,7 @@
         "z": "c4fad207f982e03f",
         "name": "",
         "label": "",
-        "group": "31e5291a19a72c92",
+        "group": "fa42c91cfff92338",
         "format": "rgb",
         "outformat": "object",
         "showSwatch": false,
@@ -765,11 +789,11 @@
         "width": 0,
         "height": 0,
         "passthru": false,
-        "topic": "home/ligth/rgb",
+        "topic": "home/ligth/rgb/suite",
         "topicType": "msg",
         "className": "",
         "x": 470,
-        "y": 620,
+        "y": 440,
         "wires": [
             [
                 "9d7c68e7e218b5a0"
@@ -779,12 +803,12 @@
     {
         "id": "72cc56167616afdf",
         "type": "ui_dropdown",
-        "z": "f37c9f369d824e1f",
+        "z": "c4fad207f982e03f",
         "name": "",
-        "label": "Modos",
+        "label": "Modos Suíte",
         "tooltip": "",
         "place": "Select option",
-        "group": "6a9428c91ab8b217",
+        "group": "fa42c91cfff92338",
         "order": 4,
         "width": 0,
         "height": 0,
@@ -792,13 +816,18 @@
         "multiple": false,
         "options": [
             {
-                "label": "Modo Noturno",
-                "value": "modo_norturno",
+                "label": "Modo Calmo",
+                "value": "modo_calmo",
                 "type": "str"
             },
             {
-                "label": "Modo Dia",
-                "value": "modo_dia",
+                "label": "Modo Padrão",
+                "value": "modo_default",
+                "type": "str"
+            },
+            {
+                "label": "Desativado",
+                "value": "desativado",
                 "type": "str"
             }
         ],
@@ -806,10 +835,353 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 130,
-        "y": 100,
+        "x": 470,
+        "y": 480,
         "wires": [
-            []
+            [
+                "a3d47c76df79c4c2"
+            ]
+        ]
+    },
+    {
+        "id": "8111810b665803ea",
+        "type": "ui_dropdown",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "label": "Modos Sala",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "2d5befcb7783d100",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Modo Festa",
+                "value": "modo_festa",
+                "type": "str"
+            },
+            {
+                "label": "Modo Calmo",
+                "value": "modo_calmo",
+                "type": "str"
+            },
+            {
+                "label": "Modo Padrão",
+                "value": "modo_default",
+                "type": "str"
+            },
+            {
+                "label": "Desativado",
+                "value": "desativado",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 450,
+        "y": 660,
+        "wires": [
+            [
+                "afa158e92e7018b6",
+                "1bcd579d95e3654b"
+            ]
+        ]
+    },
+    {
+        "id": "e3649bdf7113103e",
+        "type": "mqtt out",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "topic": "home/ligth/rgb/sala",
+        "qos": "2",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "89895e19de20a335",
+        "x": 790,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "457b2e10ffe8b032",
+        "type": "function",
+        "z": "c4fad207f982e03f",
+        "name": "function 5",
+        "func": "if (msg.payload === true) {\n    return {\n        payload: { \"r\": 100, \"g\": 100, \"b\": 100,\"a\":1}, // Mantém a cor selecionada\n        enabled: true // Habilita o color picker\n    };\n} else {\n    return {\n        payload: \"#000000\", // Cor inicial branca\n        enabled: false // Desabilita o color picker\n    };\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 640,
+        "wires": [
+            [
+                "7dec72c07c6e36ec",
+                "8111810b665803ea"
+            ]
+        ]
+    },
+    {
+        "id": "ee19be597337af5a",
+        "type": "ui_switch",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "label": "SALA-LED",
+        "tooltip": "",
+        "group": "2d5befcb7783d100",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 130,
+        "y": 680,
+        "wires": [
+            [
+                "457b2e10ffe8b032"
+            ]
+        ]
+    },
+    {
+        "id": "1b9ae99d341c7fea",
+        "type": "inject",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "str",
+        "x": 150,
+        "y": 600,
+        "wires": [
+            [
+                "457b2e10ffe8b032"
+            ]
+        ]
+    },
+    {
+        "id": "7dec72c07c6e36ec",
+        "type": "ui_colour_picker",
+        "z": "c4fad207f982e03f",
+        "name": "",
+        "label": "",
+        "group": "2d5befcb7783d100",
+        "format": "rgb",
+        "outformat": "object",
+        "showSwatch": false,
+        "showPicker": true,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "true",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "topic": "home/ligth/rgb/sala",
+        "topicType": "msg",
+        "className": "",
+        "x": 450,
+        "y": 620,
+        "wires": [
+            [
+                "afa158e92e7018b6"
+            ]
+        ]
+    },
+    {
+        "id": "afa158e92e7018b6",
+        "type": "function",
+        "z": "c4fad207f982e03f",
+        "name": "function 6",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 640,
+        "wires": [
+            [
+                "e3649bdf7113103e"
+            ]
+        ]
+    },
+    {
+        "id": "c9bc45c16b5a48dc",
+        "type": "comment",
+        "z": "c4fad207f982e03f",
+        "name": "IMPLEMENTAR MODOS",
+        "info": "",
+        "x": 550,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "81909e1a2dabd347",
+        "type": "link in",
+        "z": "c4fad207f982e03f",
+        "name": "suite",
+        "links": [
+            "a9c2b83d1369f49e"
+        ],
+        "x": 65,
+        "y": 140,
+        "wires": [
+            [
+                "865bff9036730978"
+            ]
+        ]
+    },
+    {
+        "id": "a9c2b83d1369f49e",
+        "type": "link out",
+        "z": "c4fad207f982e03f",
+        "name": "suite",
+        "mode": "link",
+        "links": [
+            "3c1760327424acae",
+            "81909e1a2dabd347"
+        ],
+        "x": 745,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "a3d47c76df79c4c2",
+        "type": "function",
+        "z": "c4fad207f982e03f",
+        "name": "function 7",
+        "func": "if(msg.payload == \"desativado\"){\n    msg.enabled = true;\n}else{\n    msg.enabled = false;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 520,
+        "wires": [
+            [
+                "a9c2b83d1369f49e"
+            ]
+        ]
+    },
+    {
+        "id": "2378322195bd7798",
+        "type": "link out",
+        "z": "c4fad207f982e03f",
+        "name": "Modo Sala",
+        "mode": "link",
+        "links": [
+            "2ec3b9e98e12f904",
+            "d5c0ca1d14366be0"
+        ],
+        "x": 745,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "1bcd579d95e3654b",
+        "type": "function",
+        "z": "c4fad207f982e03f",
+        "name": "function 8",
+        "func": "if(msg.payload == \"desativado\"){\n    msg.enabled = true;\n}else{\n    msg.enabled = false;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 700,
+        "wires": [
+            [
+                "2378322195bd7798"
+            ]
+        ]
+    },
+    {
+        "id": "2ec3b9e98e12f904",
+        "type": "link in",
+        "z": "c4fad207f982e03f",
+        "name": "Sala",
+        "links": [
+            "2378322195bd7798"
+        ],
+        "x": 65,
+        "y": 60,
+        "wires": [
+            [
+                "389aa80be53d35ed"
+            ]
+        ]
+    },
+    {
+        "id": "3c1760327424acae",
+        "type": "link in",
+        "z": "c4fad207f982e03f",
+        "name": "Suite",
+        "links": [
+            "a9c2b83d1369f49e"
+        ],
+        "x": 25,
+        "y": 500,
+        "wires": [
+            [
+                "41f5d33819526c2d"
+            ]
+        ]
+    },
+    {
+        "id": "d5c0ca1d14366be0",
+        "type": "link in",
+        "z": "c4fad207f982e03f",
+        "name": "Sala",
+        "links": [
+            "2378322195bd7798"
+        ],
+        "x": 25,
+        "y": 680,
+        "wires": [
+            [
+                "ee19be597337af5a"
+            ]
         ]
     },
     {
@@ -817,7 +1189,93 @@
         "type": "ui_switch",
         "z": "f37c9f369d824e1f",
         "name": "",
-        "label": "Alarme",
+        "label": "Alarme Porta 1",
+        "tooltip": "",
+        "group": "f5e5857d7641453a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 160,
+        "y": 160,
+        "wires": [
+            [
+                "e5ecfe2dc196c044"
+            ]
+        ]
+    },
+    {
+        "id": "48417b9c394336cb",
+        "type": "ui_switch",
+        "z": "f37c9f369d824e1f",
+        "name": "",
+        "label": "Tranca Porta 1",
+        "tooltip": "",
+        "group": "f5e5857d7641453a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 160,
+        "y": 200,
+        "wires": [
+            [
+                "e5ecfe2dc196c044"
+            ]
+        ]
+    },
+    {
+        "id": "e5ecfe2dc196c044",
+        "type": "mqtt out",
+        "z": "f37c9f369d824e1f",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "89895e19de20a335",
+        "x": 370,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "4fa8fefad3eb87b8",
+        "type": "ui_switch",
+        "z": "f37c9f369d824e1f",
+        "name": "",
+        "label": "Alarme Porta 2",
         "tooltip": "",
         "group": "6a9428c91ab8b217",
         "order": 1,
@@ -838,21 +1296,23 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 140,
-        "y": 160,
+        "x": 160,
+        "y": 280,
         "wires": [
-            []
+            [
+                "e5ecfe2dc196c044"
+            ]
         ]
     },
     {
-        "id": "48417b9c394336cb",
+        "id": "ddf538dc4f7bcac9",
         "type": "ui_switch",
         "z": "f37c9f369d824e1f",
         "name": "",
-        "label": "Tranca",
+        "label": "Tranca Porta 2",
         "tooltip": "",
         "group": "6a9428c91ab8b217",
-        "order": 3,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -870,10 +1330,12 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 130,
-        "y": 220,
+        "x": 160,
+        "y": 320,
         "wires": [
-            []
+            [
+                "e5ecfe2dc196c044"
+            ]
         ]
     },
     {
@@ -890,7 +1352,7 @@
         "correl": "",
         "expiry": "",
         "broker": "89895e19de20a335",
-        "x": 750,
+        "x": 870,
         "y": 80,
         "wires": []
     },
@@ -906,11 +1368,12 @@
         "round": false,
         "property": "payload",
         "name": "",
-        "x": 580,
+        "x": 720,
         "y": 80,
         "wires": [
             [
-                "a66b6f212505f627"
+                "a66b6f212505f627",
+                "844f209b44e9db37"
             ]
         ]
     },
@@ -919,10 +1382,10 @@
         "type": "ui_slider",
         "z": "70068137e54b09a8",
         "name": "",
-        "label": "slider",
+        "label": "speed",
         "tooltip": "",
         "group": "3bafb5f4d0dd6d9e",
-        "order": 3,
+        "order": 1,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -933,7 +1396,7 @@
         "max": "100",
         "step": "10",
         "className": "",
-        "x": 430,
+        "x": 590,
         "y": 80,
         "wires": [
             [
@@ -946,18 +1409,19 @@
         "type": "function",
         "z": "70068137e54b09a8",
         "name": "function 1",
-        "func": "if (msg.payload === true) {\n    msg.enabled = true;\n    msg.payload = 30;\n} else {\n    msg.enabled = false;\n    msg.payloas = 0;\n}\nreturn msg;\n",
+        "func": "if (msg.payload === true) {\n    msg.enabled = true;\n    msg.payload = 30;\n} else {\n    msg.enabled = false;\n    msg.payload = 0;\n}\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 280,
-        "y": 80,
+        "x": 440,
+        "y": 100,
         "wires": [
             [
-                "6d1cec86902c9aab"
+                "6d1cec86902c9aab",
+                "2bbb089494d161d4"
             ]
         ]
     },
@@ -966,10 +1430,10 @@
         "type": "ui_switch",
         "z": "70068137e54b09a8",
         "name": "",
-        "label": "switch",
+        "label": "Ar-condicionado (LIGA/DESLIGA)",
         "tooltip": "",
         "group": "3bafb5f4d0dd6d9e",
-        "order": 3,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -987,7 +1451,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 130,
+        "x": 200,
         "y": 120,
         "wires": [
             [
@@ -1012,12 +1476,181 @@
         "topic": "",
         "payload": "false",
         "payloadType": "str",
-        "x": 130,
-        "y": 40,
+        "x": 290,
+        "y": 80,
         "wires": [
             [
                 "f1855334c21e3122"
             ]
         ]
+    },
+    {
+        "id": "342a78aa5fec7e02",
+        "type": "ui_chart",
+        "z": "70068137e54b09a8",
+        "name": "",
+        "group": "c170da322eb935c7",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Monitor",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-30",
+        "ymax": "50",
+        "removeOlder": 1,
+        "removeOlderPoints": "10",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 560,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9e803503eb40a084",
+        "type": "mqtt in",
+        "z": "70068137e54b09a8",
+        "name": "",
+        "topic": "home/sensor/temperature",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "89895e19de20a335",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 240,
+        "wires": [
+            [
+                "127d46e026772f3e"
+            ]
+        ]
+    },
+    {
+        "id": "127d46e026772f3e",
+        "type": "function",
+        "z": "70068137e54b09a8",
+        "name": "function 3",
+        "func": "let newPayload = parseInt(msg.payload);\nmsg.payload = newPayload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 240,
+        "wires": [
+            [
+                "342a78aa5fec7e02",
+                "08e92d7f5702cc5f"
+            ]
+        ]
+    },
+    {
+        "id": "08e92d7f5702cc5f",
+        "type": "ui_numeric",
+        "z": "70068137e54b09a8",
+        "name": "",
+        "label": "Temperatura de acionamento maxima",
+        "tooltip": "",
+        "group": "c170da322eb935c7",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": "16",
+        "max": "27",
+        "step": 1,
+        "className": "",
+        "x": 610,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "49c949e2645cf328",
+        "type": "ui_text",
+        "z": "70068137e54b09a8",
+        "group": "3bafb5f4d0dd6d9e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "STATUS:",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "style": true,
+        "font": "Tahoma,Geneva,sans-serif",
+        "fontSize": 16,
+        "color": "#0affad",
+        "x": 740,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "2bbb089494d161d4",
+        "type": "function",
+        "z": "70068137e54b09a8",
+        "name": "function 4",
+        "func": "if (msg.payload > 0){\n    msg.payload = \"Ligado\";\n}else{\n    msg.payload = \"Desligado\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 140,
+        "wires": [
+            [
+                "49c949e2645cf328"
+            ]
+        ]
+    },
+    {
+        "id": "844f209b44e9db37",
+        "type": "debug",
+        "z": "70068137e54b09a8",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 140,
+        "wires": []
     }
 ]
