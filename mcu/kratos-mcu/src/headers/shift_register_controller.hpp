@@ -1,10 +1,8 @@
 #pragma once
 
 typedef enum{
-  X1, X2, X3,
-  X4, X5, X6,
-  X7, X8
-} shiftDoor;
+  REG_XO_1,REG_XO_2,REG_XO_3,REG_XO_4,REG_XO_5,REG_XO_6,REG_XO_7,REG_XO_8
+} REG_XOS;
 
 void setupShiftRegister();
 void updateShiftRegister();

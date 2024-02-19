@@ -600,7 +600,7 @@
 
   (footprint "ESP32-DEVKIT-V1:MODULE_ESP32_DEVKIT_V1" (layer "F.Cu")
     (tstamp 3bf36217-736a-4ed4-b45d-c3bfc47584c6)
-    (at 111.125 115.21)
+    (at 111.76 117.115)
     (property "Availability" "Not in stock")
     (property "Check_prices" "https://www.snapeda.com/parts/ESP32-DEVKIT-V1/Do+it/view-part/?ref=eda")
     (property "Description" "\nDual core, Wi-Fi: 2.4 GHz up to 150 Mbits/s,BLE (Bluetooth Low Energy) and legacy Bluetooth, 32 bits, Up to 240 MHz\n")
@@ -766,10 +766,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 102.215 134.195)
-          (xy 119.905 134.195)
-          (xy 119.905 140.685)
-          (xy 102.215 140.685)
+          (xy 102.85 136.1)
+          (xy 120.54 136.1)
+          (xy 120.54 142.59)
+          (xy 102.85 142.59)
         )
       )
     )
@@ -780,10 +780,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 102.215 134.195)
-          (xy 119.905 134.195)
-          (xy 119.905 140.685)
-          (xy 102.215 140.685)
+          (xy 102.85 136.1)
+          (xy 120.54 136.1)
+          (xy 120.54 142.59)
+          (xy 102.85 142.59)
         )
       )
     )
@@ -794,10 +794,10 @@
       (fill (thermal_gap 0.508) (thermal_bridge_width 0.508))
       (polygon
         (pts
-          (xy 102.215 134.195)
-          (xy 119.905 134.195)
-          (xy 119.905 140.685)
-          (xy 102.215 140.685)
+          (xy 102.85 136.1)
+          (xy 120.54 136.1)
+          (xy 120.54 142.59)
+          (xy 102.85 142.59)
         )
       )
     )
@@ -1333,7 +1333,7 @@
 
   (footprint "SN74HC595N:DIP794W53P254L1930H508Q16N" (layer "F.Cu")
     (tstamp 6de3f7d8-9392-4a1b-a680-584bfe23cafe)
-    (at 142.24 91.44 -90)
+    (at 142.24 87.47 -90)
     (descr "N (R-PDIP-T16)")
     (tags "Integrated Circuit")
     (property "Height" "5.08")
