@@ -540,7 +540,7 @@
         "type": "mqtt out",
         "z": "c4fad207f982e03f",
         "name": "",
-        "topic": "home/ligth/rgb/suite",
+        "topic": "home/ligth/rgb",
         "qos": "2",
         "retain": "false",
         "respTopic": "",
@@ -549,8 +549,8 @@
         "correl": "",
         "expiry": "",
         "broker": "89895e19de20a335",
-        "x": 670,
-        "y": 460,
+        "x": 940,
+        "y": 560,
         "wires": []
     },
     {
@@ -796,7 +796,7 @@
         "y": 440,
         "wires": [
             [
-                "9d7c68e7e218b5a0"
+                "5fd248434658804f"
             ]
         ]
     },
@@ -839,7 +839,8 @@
         "y": 480,
         "wires": [
             [
-                "a3d47c76df79c4c2"
+                "a3d47c76df79c4c2",
+                "5fd248434658804f"
             ]
         ]
     },
@@ -887,28 +888,10 @@
         "y": 660,
         "wires": [
             [
-                "afa158e92e7018b6",
-                "1bcd579d95e3654b"
+                "1bcd579d95e3654b",
+                "21a205609e11d279"
             ]
         ]
-    },
-    {
-        "id": "e3649bdf7113103e",
-        "type": "mqtt out",
-        "z": "c4fad207f982e03f",
-        "name": "",
-        "topic": "home/ligth/rgb/sala",
-        "qos": "2",
-        "retain": "false",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "89895e19de20a335",
-        "x": 790,
-        "y": 640,
-        "wires": []
     },
     {
         "id": "457b2e10ffe8b032",
@@ -1018,27 +1001,7 @@
         "y": 620,
         "wires": [
             [
-                "afa158e92e7018b6"
-            ]
-        ]
-    },
-    {
-        "id": "afa158e92e7018b6",
-        "type": "function",
-        "z": "c4fad207f982e03f",
-        "name": "function 6",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 620,
-        "y": 640,
-        "wires": [
-            [
-                "e3649bdf7113103e"
+                "21a205609e11d279"
             ]
         ]
     },
@@ -1112,8 +1075,8 @@
             "2ec3b9e98e12f904",
             "d5c0ca1d14366be0"
         ],
-        "x": 745,
-        "y": 700,
+        "x": 765,
+        "y": 740,
         "wires": []
     },
     {
@@ -1129,7 +1092,7 @@
         "finalize": "",
         "libs": [],
         "x": 640,
-        "y": 700,
+        "y": 740,
         "wires": [
             [
                 "2378322195bd7798"
@@ -1183,6 +1146,64 @@
                 "ee19be597337af5a"
             ]
         ]
+    },
+    {
+        "id": "5fd248434658804f",
+        "type": "function",
+        "z": "c4fad207f982e03f",
+        "name": "function 9",
+        "func": "var jsonRGB = msg.payload;\n\n// Crie um novo JSON com o campo \"index\" adicionado\nvar novoJSON = {\n    \"index\": 0, // Substitua 123 pelo valor do índice desejado\n    \"rgb\": jsonRGB // Mantém o JSON de RGB intacto\n};\n\n// Envie o novo JSON para a próxima etapa\nmsg.payload = novoJSON;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 440,
+        "wires": [
+            [
+                "9d7c68e7e218b5a0",
+                "863908508e131a7d"
+            ]
+        ]
+    },
+    {
+        "id": "21a205609e11d279",
+        "type": "function",
+        "z": "c4fad207f982e03f",
+        "name": "function 10",
+        "func": "var jsonRGB = msg.payload;\n\n// Crie um novo JSON com o campo \"index\" adicionado\nvar novoJSON = {\n    \"index\": 1, // Substitua 123 pelo valor do índice desejado\n    \"rgb\": jsonRGB // Mantém o JSON de RGB intacto\n};\n\n// Envie o novo JSON para a próxima etapa\nmsg.payload = novoJSON;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 640,
+        "wires": [
+            [
+                "9d7c68e7e218b5a0",
+                "863908508e131a7d"
+            ]
+        ]
+    },
+    {
+        "id": "863908508e131a7d",
+        "type": "debug",
+        "z": "c4fad207f982e03f",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 440,
+        "wires": []
     },
     {
         "id": "bf3c2cfde862a5b8",
