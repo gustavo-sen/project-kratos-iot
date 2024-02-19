@@ -22,16 +22,13 @@ void updateSensorDHT(){
     dht.temperature().getEvent(&temp_event);
     dht.humidity().getEvent(&humidity_event);
 
-    StaticJsonDocument<200> doc;
+    ArduinoJson::JsonDocument doc;
     std::string jsonString;
 
-    if (!isnan(temp_event.temperature)) {        
+    if (!isnan(temp_event.temperature) && !isnan(humidity_event.temperature)) {        
         doc["temperature"] = temp_event.temperature;
-    }
-    if (!isnan(humidity_event.temperature)) {
         doc["relative_humidity"] = humidity_event.relative_humidity;
+        serializeJson(doc, jsonString);
+        mqtt_publish("home/sensor/dhtsensor", jsonString.c_str());
     }
-
-    serializeJson(doc, jsonString);
-    mqtt_publish("home/sensor/dhtsensor", jsonString.c_str());
 }

@@ -5,6 +5,12 @@
 #define CLOCK_PIN 18  // Pino SH_CP (SRCLK) conectado ao pino 11 do 74HC595
 #define DATA_PIN 23   // Pino DS (SER) conectado ao pino 14 do 74HC595 
 
+enum{
+  X1, X2, X3,
+  X4, X5, X6,
+  X7, X8
+};
+
 byte registerData = 0;
 
 void setupShiftRegister() {

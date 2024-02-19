@@ -292,15 +292,6 @@
         "height": 1
     },
     {
-        "id": "1ff1c9fa3da5ad76",
-        "type": "ui_group",
-        "name": "Group 3",
-        "tab": "7426176b38d2a214",
-        "order": 3,
-        "disp": true,
-        "width": 6
-    },
-    {
         "id": "c1ebf1a0d06f37b4",
         "type": "mqtt in",
         "z": "62947d5f581f77cb",
@@ -549,7 +540,7 @@
         "type": "mqtt out",
         "z": "c4fad207f982e03f",
         "name": "",
-        "topic": "home/ligth/rgb/suite",
+        "topic": "home/ligth/rgb",
         "qos": "2",
         "retain": "false",
         "respTopic": "",
@@ -558,8 +549,8 @@
         "correl": "",
         "expiry": "",
         "broker": "89895e19de20a335",
-        "x": 670,
-        "y": 460,
+        "x": 940,
+        "y": 560,
         "wires": []
     },
     {
@@ -714,8 +705,7 @@
         "y": 460,
         "wires": [
             [
-                "ee9d44a73c9c9a4d",
-                "72cc56167616afdf"
+                "ee9d44a73c9c9a4d"
             ]
         ]
     },
@@ -806,7 +796,7 @@
         "y": 440,
         "wires": [
             [
-                "9d7c68e7e218b5a0"
+                "5fd248434658804f"
             ]
         ]
     },
@@ -849,8 +839,8 @@
         "y": 480,
         "wires": [
             [
-                "9d7c68e7e218b5a0",
-                "a3d47c76df79c4c2"
+                "a3d47c76df79c4c2",
+                "5fd248434658804f"
             ]
         ]
     },
@@ -898,28 +888,10 @@
         "y": 660,
         "wires": [
             [
-                "afa158e92e7018b6",
-                "1bcd579d95e3654b"
+                "1bcd579d95e3654b",
+                "21a205609e11d279"
             ]
         ]
-    },
-    {
-        "id": "e3649bdf7113103e",
-        "type": "mqtt out",
-        "z": "c4fad207f982e03f",
-        "name": "",
-        "topic": "home/ligth/rgb/sala",
-        "qos": "2",
-        "retain": "false",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "89895e19de20a335",
-        "x": 790,
-        "y": 640,
-        "wires": []
     },
     {
         "id": "457b2e10ffe8b032",
@@ -1029,27 +1001,7 @@
         "y": 620,
         "wires": [
             [
-                "afa158e92e7018b6"
-            ]
-        ]
-    },
-    {
-        "id": "afa158e92e7018b6",
-        "type": "function",
-        "z": "c4fad207f982e03f",
-        "name": "function 6",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 620,
-        "y": 640,
-        "wires": [
-            [
-                "e3649bdf7113103e"
+                "21a205609e11d279"
             ]
         ]
     },
@@ -1123,8 +1075,8 @@
             "2ec3b9e98e12f904",
             "d5c0ca1d14366be0"
         ],
-        "x": 745,
-        "y": 700,
+        "x": 765,
+        "y": 740,
         "wires": []
     },
     {
@@ -1140,7 +1092,7 @@
         "finalize": "",
         "libs": [],
         "x": 640,
-        "y": 700,
+        "y": 740,
         "wires": [
             [
                 "2378322195bd7798"
@@ -1194,6 +1146,64 @@
                 "ee19be597337af5a"
             ]
         ]
+    },
+    {
+        "id": "5fd248434658804f",
+        "type": "function",
+        "z": "c4fad207f982e03f",
+        "name": "function 9",
+        "func": "var jsonRGB = msg.payload;\n\n// Crie um novo JSON com o campo \"index\" adicionado\nvar novoJSON = {\n    \"index\": 1, // Substitua 123 pelo valor do índice desejado\n    \"rgb\": jsonRGB // Mantém o JSON de RGB intacto\n};\n\n// Envie o novo JSON para a próxima etapa\nmsg.payload = novoJSON;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 440,
+        "wires": [
+            [
+                "9d7c68e7e218b5a0",
+                "863908508e131a7d"
+            ]
+        ]
+    },
+    {
+        "id": "21a205609e11d279",
+        "type": "function",
+        "z": "c4fad207f982e03f",
+        "name": "function 10",
+        "func": "var jsonRGB = msg.payload;\n\n// Crie um novo JSON com o campo \"index\" adicionado\nvar novoJSON = {\n    \"index\": 2, // Substitua 123 pelo valor do índice desejado\n    \"rgb\": jsonRGB // Mantém o JSON de RGB intacto\n};\n\n// Envie o novo JSON para a próxima etapa\nmsg.payload = novoJSON;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 640,
+        "wires": [
+            [
+                "9d7c68e7e218b5a0",
+                "863908508e131a7d"
+            ]
+        ]
+    },
+    {
+        "id": "863908508e131a7d",
+        "type": "debug",
+        "z": "c4fad207f982e03f",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 440,
+        "wires": []
     },
     {
         "id": "bf3c2cfde862a5b8",
@@ -1350,63 +1360,6 @@
         ]
     },
     {
-        "id": "a64cef838a70b072",
-        "type": "mqtt in",
-        "z": "f37c9f369d824e1f",
-        "name": "",
-        "topic": "home/sensor/door/porta_1",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "89895e19de20a335",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 190,
-        "y": 380,
-        "wires": [
-            [
-                "04f04615afed3e43",
-                "6e36de3bd504b4a1"
-            ]
-        ]
-    },
-    {
-        "id": "04f04615afed3e43",
-        "type": "ui_toast",
-        "z": "f37c9f369d824e1f",
-        "position": "top right",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "",
-        "x": 440,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "6e36de3bd504b4a1",
-        "type": "debug",
-        "z": "f37c9f369d824e1f",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 440,
-        "y": 460,
-        "wires": []
-    },
-    {
         "id": "a66b6f212505f627",
         "type": "mqtt out",
         "z": "70068137e54b09a8",
@@ -1440,7 +1393,8 @@
         "y": 80,
         "wires": [
             [
-                "a66b6f212505f627"
+                "a66b6f212505f627",
+                "844f209b44e9db37"
             ]
         ]
     },
@@ -1567,9 +1521,9 @@
         "interpolate": "linear",
         "nodata": "",
         "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "5",
+        "ymin": "-30",
+        "ymax": "50",
+        "removeOlder": 1,
         "removeOlderPoints": "10",
         "removeOlderUnit": "60",
         "cutout": 0,
@@ -1590,7 +1544,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 560,
-        "y": 280,
+        "y": 220,
         "wires": [
             []
         ]
@@ -1600,7 +1554,7 @@
         "type": "mqtt in",
         "z": "70068137e54b09a8",
         "name": "",
-        "topic": "home/sensor/dhtsensor",
+        "topic": "home/sensor/temperature",
         "qos": "0",
         "datatype": "utf8",
         "broker": "89895e19de20a335",
@@ -1608,12 +1562,11 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 120,
-        "y": 300,
+        "x": 130,
+        "y": 240,
         "wires": [
             [
-                "127d46e026772f3e",
-                "b15f3fe6b9524ddf"
+                "127d46e026772f3e"
             ]
         ]
     },
@@ -1622,7 +1575,7 @@
         "type": "function",
         "z": "70068137e54b09a8",
         "name": "function 3",
-        "func": "let data = JSON.parse(msg.payload);\nlet temperature = parseFloat(data.temperature).toFixed(2);\n\nlet newMsg = {\n    payload: temperature\n};\n\nreturn newMsg;\n",
+        "func": "let newPayload = parseInt(msg.payload);\nmsg.payload = newPayload;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1630,12 +1583,11 @@
         "finalize": "",
         "libs": [],
         "x": 360,
-        "y": 280,
+        "y": 240,
         "wires": [
             [
                 "342a78aa5fec7e02",
-                "08e92d7f5702cc5f",
-                "1d4f4f6eb303dece"
+                "08e92d7f5702cc5f"
             ]
         ]
     },
@@ -1660,7 +1612,7 @@
         "step": 1,
         "className": "",
         "x": 610,
-        "y": 320,
+        "y": 260,
         "wires": [
             []
         ]
@@ -1707,79 +1659,19 @@
         ]
     },
     {
-        "id": "b15f3fe6b9524ddf",
-        "type": "function",
+        "id": "844f209b44e9db37",
+        "type": "debug",
         "z": "70068137e54b09a8",
-        "name": "function 9",
-        "func": "let data = JSON.parse(msg.payload);\nlet relative_humidity = parseFloat(data.relative_humidity).toFixed(2);\n\nlet newMsg = {\n    payload: relative_humidity\n};\n\nreturn newMsg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 360,
-        "y": 360,
-        "wires": [
-            [
-                "68f32e7a821cfc1b"
-            ]
-        ]
-    },
-    {
-        "id": "1d4f4f6eb303dece",
-        "type": "ui_gauge",
-        "z": "70068137e54b09a8",
-        "name": "",
-        "group": "3bafb5f4d0dd6d9e",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "Temperatura",
-        "label": "units",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "40",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 530,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "68f32e7a821cfc1b",
-        "type": "ui_gauge",
-        "z": "70068137e54b09a8",
-        "name": "",
-        "group": "1ff1c9fa3da5ad76",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "gtype": "wave",
-        "title": "Umidade",
-        "label": "units",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 520,
-        "y": 360,
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 140,
         "wires": []
     }
 ]
