@@ -1,7 +1,4 @@
-.npm
-.backup
-.backup
-pcb/kratos-pcb/_autosave-kratos-pcb.kicad_pcb
-pcb/kratos-pcb/~_autosave-kratos-pcb.kicad_pcb.lck
-.bat
+*.npm
+*.backup
+*.bat
 #auto_saved_files#
