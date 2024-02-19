@@ -515,7 +515,7 @@
         "type": "ui_switch",
         "z": "c4fad207f982e03f",
         "name": "",
-        "label": "Luz principal",
+        "label": "Luz Sala",
         "tooltip": "",
         "group": "2d5befcb7783d100",
         "order": 1,
@@ -536,7 +536,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 170,
+        "x": 180,
         "y": 60,
         "wires": [
             [
@@ -1481,8 +1481,7 @@
         "y": 80,
         "wires": [
             [
-                "a66b6f212505f627",
-                "844f209b44e9db37"
+                "a66b6f212505f627"
             ]
         ]
     },
@@ -1676,8 +1675,7 @@
         "wires": [
             [
                 "342a78aa5fec7e02",
-                "08e92d7f5702cc5f",
-                "1d4f4f6eb303dece"
+                "08e92d7f5702cc5f"
             ]
         ]
     },
@@ -1761,7 +1759,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 380,
-        "y": 340,
+        "y": 380,
         "wires": []
     }
 ]

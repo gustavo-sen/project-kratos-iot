@@ -22,8 +22,8 @@ const char* CLIENT_ID = "esp32-client";
 const char* MQTT_USER = "admin";
 const char* MQTT_PASS = "admin";
 
-// const char* MQTT_SERVER = "172.18.9.95";
-const char* MQTT_SERVER = "10.0.0.221";
+const char* MQTT_SERVER = "172.18.9.95";
+// const char* MQTT_SERVER = "10.0.0.221";
 const char* MQTT_PORT = "1883";
 
 WiFiClient espClient;

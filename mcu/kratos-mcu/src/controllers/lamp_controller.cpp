@@ -6,15 +6,12 @@
 
 #include "./headers/lamp_controller.hpp"
 #include "./headers/mqtt_client.hpp"
+#include "./headers/shift_register_controller.hpp"
 
-const gpio_num_t lampsPort[] = {GPIO_NUM_13, GPIO_NUM_19, GPIO_NUM_21};
+const shiftDoor lampsPort[] = {X1,X2,X3,X4,X5,X6};
 
 void setup_lamp(){
     mqtt_subcribe("lamp");
-
-    for (gpio_num_t pin : lampsPort) {
-        gpio_set_direction(pin, GPIO_MODE_OUTPUT);
-    }
 }
 
 void lamp_update(std::string& packetStr, const char& lampNum){ 
@@ -31,9 +28,9 @@ void lamp_update(std::string& packetStr, const char& lampNum){
     std::string lampName = doc["name"];
 
     if(isOn){
-        gpio_set_level(lampsPort[lampNumber], 0);
+        setBit(lampsPort[lampNumber], true);
     }else{
-        gpio_set_level(lampsPort[lampNumber], 1);
+        setBit(lampsPort[lampNumber], false);
     }    
 
     std::string message = "Lamp " + lampName + " was turned " + (isOn ? "on" : "off");
