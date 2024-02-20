@@ -145,11 +145,11 @@
         )
       )
     )
-    (symbol "power:+3V3" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+    (symbol "power:+3.3V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -3.81 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Value" "+3V3" (at 0 3.556 0)
+      (property "Value" "+3.3V" (at 0 3.556 0)
         (effects (font (size 1.27 1.27)))
       )
       (property "Footprint" "" (at 0 0 0)
@@ -161,10 +161,10 @@
       (property "ki_keywords" "global power" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Power symbol creates a global label with name \"+3V3\"" (at 0 0 0)
+      (property "ki_description" "Power symbol creates a global label with name \"+3.3V\"" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "+3V3_0_1"
+      (symbol "+3.3V_0_1"
         (polyline
           (pts
             (xy -0.762 1.27)
@@ -190,9 +190,9 @@
           (fill (type none))
         )
       )
-      (symbol "+3V3_1_1"
+      (symbol "+3.3V_1_1"
         (pin power_in line (at 0 0 90) (length 0) hide
-          (name "+3V3" (effects (font (size 1.27 1.27))))
+          (name "+3.3V" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
       )
@@ -349,6 +349,31 @@
     )
   )
 
+  (symbol (lib_id "power:+3.3V") (at 157.48 81.28 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 00eeaf40-073a-470a-bda5-c31cad723725)
+    (property "Reference" "#PWR012" (at 157.48 85.09 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3V" (at 157.48 76.2 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 157.48 81.28 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 157.48 81.28 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 68314482-0235-4fb3-b35e-4bae4904b02b))
+    (instances
+      (project "kratos-pcb"
+        (path "/12f1b997-8c5f-4ef7-b036-7873ddaba48e/ab0aa194-5f27-4f16-bd8b-12afa764e651"
+          (reference "#PWR012") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:GND") (at 151.13 101.6 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7a04bbc3-0ae3-4d30-985e-18211e2b7bb5)
@@ -396,31 +421,6 @@
       (project "kratos-pcb"
         (path "/12f1b997-8c5f-4ef7-b036-7873ddaba48e/ab0aa194-5f27-4f16-bd8b-12afa764e651"
           (reference "DHT_SENSOR1") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+3V3") (at 157.48 81.28 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid b38febb4-945d-4933-80ba-e193477400aa)
-    (property "Reference" "#PWR012" (at 157.48 85.09 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3V3" (at 157.48 76.2 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 157.48 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 157.48 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid cf716ba6-ded3-4ca3-9170-a4c6cc8d096f))
-    (instances
-      (project "kratos-pcb"
-        (path "/12f1b997-8c5f-4ef7-b036-7873ddaba48e/ab0aa194-5f27-4f16-bd8b-12afa764e651"
-          (reference "#PWR012") (unit 1)
         )
       )
     )

@@ -88,11 +88,11 @@
         )
       )
     )
-    (symbol "power:VCC" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+    (symbol "power:+5V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -3.81 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Value" "VCC" (at 0 3.81 0)
+      (property "Value" "+5V" (at 0 3.556 0)
         (effects (font (size 1.27 1.27)))
       )
       (property "Footprint" "" (at 0 0 0)
@@ -104,10 +104,10 @@
       (property "ki_keywords" "global power" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Power symbol creates a global label with name \"VCC\"" (at 0 0 0)
+      (property "ki_description" "Power symbol creates a global label with name \"+5V\"" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "VCC_0_1"
+      (symbol "+5V_0_1"
         (polyline
           (pts
             (xy -0.762 1.27)
@@ -133,9 +133,9 @@
           (fill (type none))
         )
       )
-      (symbol "VCC_1_1"
+      (symbol "+5V_1_1"
         (pin power_in line (at 0 0 90) (length 0) hide
-          (name "VCC" (effects (font (size 1.27 1.27))))
+          (name "+5V" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
       )
@@ -190,13 +190,13 @@
     )
   )
 
-  (symbol (lib_id "power:VCC") (at 101.6 68.58 0) (unit 1)
+  (symbol (lib_id "power:+5V") (at 101.6 68.58 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 8c474300-f0ea-4556-a0ad-6a59baed33f3)
+    (uuid d88aa9be-1ed1-4f48-a5f5-228f9cf29593)
     (property "Reference" "#PWR08" (at 101.6 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "VCC" (at 101.6 63.5 0)
+    (property "Value" "+5V" (at 101.6 63.5 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "" (at 101.6 68.58 0)
@@ -205,7 +205,7 @@
     (property "Datasheet" "" (at 101.6 68.58 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 083088e8-b670-4a49-a47a-0d7b8435c3ca))
+    (pin "1" (uuid f26377a2-66d3-4cdd-ad86-f93a05d63ffd))
     (instances
       (project "kratos-pcb"
         (path "/12f1b997-8c5f-4ef7-b036-7873ddaba48e/40f2ff16-84bd-4283-bb2c-5258389cef5b"
