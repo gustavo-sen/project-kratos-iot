@@ -509,6 +509,10 @@
     [
       "ab0aa194-5f27-4f16-bd8b-12afa764e651",
       "DHT22-SENSOR"
+    ],
+    [
+      "7e83680a-c321-4d95-9d9a-9e6345d60e4b",
+      "rfid"
     ]
   ],
   "text_variables": {}

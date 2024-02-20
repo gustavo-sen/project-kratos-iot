@@ -13,7 +13,7 @@ void update(char* topic, std::string packageTemp){
     }else if(strcmp(topic, "home/cooling") == 0){
         fan_speed(std::stoi(packageTemp));
     
-    }else if(strcmp(topic, "home/security/door/lock") == 0){
+    }else if(strcmp(topic, "home/security/lockers") == 0){
         update_door_lock(packageTemp);
 
     }else if(strcmp(topic, "home/ligth/rgb") == 0){

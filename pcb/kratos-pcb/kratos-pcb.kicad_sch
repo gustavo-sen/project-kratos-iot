@@ -98,6 +98,23 @@
     )
   )
 
+  (sheet (at 106.68 54.61) (size 44.45 25.4) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 7e83680a-c321-4d95-9d9a-9e6345d60e4b)
+    (property "Sheetname" "rfid" (at 106.68 53.8984 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "rfid.kicad_sch" (at 106.68 80.5946 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "kratos-pcb"
+        (path "/12f1b997-8c5f-4ef7-b036-7873ddaba48e" (page "9"))
+      )
+    )
+  )
+
   (sheet (at 63.5 54.61) (size 40.64 25.4) (fields_autoplaced)
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))

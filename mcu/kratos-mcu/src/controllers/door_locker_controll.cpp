@@ -6,17 +6,22 @@
 const REG_XOS lockers[] = {REG_XO_6, REG_XO_7};
 
 void set_up_lockers(){
-    mqtt_subcribe("security/trancas");
+    mqtt_subcribe("security/lockers");
 }
 
 void update_door_lock(std::string& packetStr){
-    StaticJsonDocument<200> doc;
+    JsonDocument doc;
     DeserializationError error = deserializeJson(doc, packetStr);
 
-    int lockNumber = doc["lockNumber"];
+    uint8_t lockNumber = doc["lockNumber"];
     std::string lockName = doc["lockName"];
     bool isLock = doc["isLock"];
 
+    if(lockNumber == 0){
+        setBit(REG_XO_7, isLock);
+    }else if(lockNumber == 1){
+        setBit(REG_XO_6, isLock);
+    }
 
     std::string message = "Lock " + lockName + " was " + (isLock ? "closed" : "open");
 

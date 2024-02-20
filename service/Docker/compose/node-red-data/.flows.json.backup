@@ -515,7 +515,7 @@
         "type": "ui_switch",
         "z": "c4fad207f982e03f",
         "name": "",
-        "label": "Luz principal",
+        "label": "Luz Sala",
         "tooltip": "",
         "group": "2d5befcb7783d100",
         "order": 1,
@@ -536,7 +536,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 170,
+        "x": 180,
         "y": 60,
         "wires": [
             [
@@ -658,40 +658,6 @@
         "className": "",
         "x": 180,
         "y": 180,
-        "wires": [
-            [
-                "33eee9a40f27fc26"
-            ]
-        ]
-    },
-    {
-        "id": "baa386ce979d9521",
-        "type": "ui_switch",
-        "z": "c4fad207f982e03f",
-        "name": "",
-        "label": "Lamp 4",
-        "tooltip": "",
-        "group": "0fc7b11b032ba303",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "home/lamp",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "{\"lampNumber\":6,\"isOn\":true,\"name\":\"lampada 4\"}",
-        "onvalueType": "json",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "{\"lampNumber\":6,\"isOn\":false,\"name\":\"lampada 4\"}",
-        "offvalueType": "json",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 180,
-        "y": 300,
         "wires": [
             [
                 "33eee9a40f27fc26"
@@ -1240,11 +1206,11 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 160,
-        "y": 160,
+        "x": 180,
+        "y": 240,
         "wires": [
             [
-                "e5ecfe2dc196c044"
+                "33c6d89eb966aafb"
             ]
         ]
     },
@@ -1264,18 +1230,18 @@
         "topic": "topic",
         "topicType": "msg",
         "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
+        "onvalue": "{\"lockNumber\":0,\"isLock\":true,\"lockName\":\"porta_1\"}",
+        "onvalueType": "json",
         "onicon": "",
         "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
+        "offvalue": "{\"lockNumber\":0,\"isLock\":false,\"lockName\":\"porta_1\"}",
+        "offvalueType": "json",
         "officon": "",
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 160,
-        "y": 200,
+        "x": 180,
+        "y": 140,
         "wires": [
             [
                 "e5ecfe2dc196c044"
@@ -1287,7 +1253,7 @@
         "type": "mqtt out",
         "z": "f37c9f369d824e1f",
         "name": "",
-        "topic": "",
+        "topic": "home/security/lockers",
         "qos": "2",
         "retain": "false",
         "respTopic": "",
@@ -1296,8 +1262,8 @@
         "correl": "",
         "expiry": "",
         "broker": "89895e19de20a335",
-        "x": 370,
-        "y": 240,
+        "x": 400,
+        "y": 160,
         "wires": []
     },
     {
@@ -1326,11 +1292,11 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 160,
+        "x": 180,
         "y": 280,
         "wires": [
             [
-                "e5ecfe2dc196c044"
+                "33c6d89eb966aafb"
             ]
         ]
     },
@@ -1350,18 +1316,18 @@
         "topic": "topic",
         "topicType": "msg",
         "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
+        "onvalue": "{     \"lockNumber\": 1,     \"isLock\": true,     \"lockName\": \"porta_2\" }",
+        "onvalueType": "json",
         "onicon": "",
         "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
+        "offvalue": "{     \"lockNumber\": 1,     \"isLock\": false,     \"lockName\": \"porta_2\" }",
+        "offvalueType": "json",
         "officon": "",
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 160,
-        "y": 320,
+        "x": 180,
+        "y": 180,
         "wires": [
             [
                 "e5ecfe2dc196c044"
@@ -1448,6 +1414,24 @@
         ]
     },
     {
+        "id": "33c6d89eb966aafb",
+        "type": "mqtt out",
+        "z": "f37c9f369d824e1f",
+        "name": "",
+        "topic": "security/sensor/door",
+        "qos": "2",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "89895e19de20a335",
+        "x": 400,
+        "y": 260,
+        "wires": []
+    },
+    {
         "id": "a66b6f212505f627",
         "type": "mqtt out",
         "z": "70068137e54b09a8",
@@ -1481,8 +1465,7 @@
         "y": 80,
         "wires": [
             [
-                "a66b6f212505f627",
-                "844f209b44e9db37"
+                "a66b6f212505f627"
             ]
         ]
     },
@@ -1676,8 +1659,7 @@
         "wires": [
             [
                 "342a78aa5fec7e02",
-                "08e92d7f5702cc5f",
-                "1d4f4f6eb303dece"
+                "08e92d7f5702cc5f"
             ]
         ]
     },
@@ -1761,7 +1743,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 380,
-        "y": 340,
+        "y": 380,
         "wires": []
     }
 ]
