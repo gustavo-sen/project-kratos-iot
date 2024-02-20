@@ -1371,24 +1371,8 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 440,
+        "x": 460,
         "y": 380,
-        "wires": []
-    },
-    {
-        "id": "6e36de3bd504b4a1",
-        "type": "debug",
-        "z": "f37c9f369d824e1f",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 440,
-        "y": 460,
         "wires": []
     },
     {
@@ -1429,6 +1413,22 @@
         "broker": "89895e19de20a335",
         "x": 400,
         "y": 260,
+        "wires": []
+    },
+    {
+        "id": "6e36de3bd504b4a1",
+        "type": "debug",
+        "z": "f37c9f369d824e1f",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 460,
         "wires": []
     },
     {

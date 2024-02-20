@@ -1320,7 +1320,7 @@
         "onvalueType": "json",
         "onicon": "",
         "oncolor": "",
-        "offvalue": "{     \"lockNumber\": 1,     \"isLock\": false,     \"lockName\": \"porta_2\" }",
+        "offvalue": "{\"lockNumber\":1,\"isLock\":false,\"lockName\":\"porta_2\"}",
         "offvalueType": "json",
         "officon": "",
         "offcolor": "",
