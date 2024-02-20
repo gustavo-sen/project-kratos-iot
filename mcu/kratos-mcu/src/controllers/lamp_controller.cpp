@@ -8,7 +8,7 @@
 #include "./headers/mqtt_client.hpp"
 #include "./headers/shift_register_controller.hpp"
 
-const shiftDoor lampsPort[] = {X1,X2,X3,X4,X5,X6};
+const REG_XOS lampsPort[] = {REG_XO_1,REG_XO_2,REG_XO_3,REG_XO_4,REG_XO_5,REG_XO_6};
 
 void setup_lamp(){
     mqtt_subcribe("lamp");
@@ -16,7 +16,7 @@ void setup_lamp(){
 
 void lamp_update(std::string& packetStr, const char& lampNum){ 
 
-    StaticJsonDocument<200> doc;
+    JsonDocument doc;
     DeserializationError error = deserializeJson(doc, packetStr);
 
     if (error) {

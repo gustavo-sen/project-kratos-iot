@@ -6,4 +6,4 @@ typedef enum{
 
 void setupShiftRegister();
 void updateShiftRegister();
-void setBit(shiftDoor bitIndex, bool value);
+void setBit(REG_XOS bitIndex, bool value);
