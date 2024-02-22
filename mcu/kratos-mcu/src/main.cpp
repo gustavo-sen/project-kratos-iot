@@ -33,6 +33,10 @@ void setup() {
 
 void loop() {
     mqtt_client_callback_task();
+    setBit(REG_XO_7,1);
+    delay(500);
+    setBit(REG_XO_7, 0);
+    delay(500);
 }
 
 void doorSensorTask(void *pvParameters) {
