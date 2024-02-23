@@ -18,7 +18,7 @@ void update_door_lock(std::string& packetStr){
 
     if(lockNumber == 0){
         setBit(REG_XO_6, isLock);
-    }else if(lockNumber == 1){
+    }else{
         setBit(REG_XO_7, isLock);
     }
 

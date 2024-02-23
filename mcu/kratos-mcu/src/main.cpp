@@ -26,7 +26,7 @@ void setup() {
     sensor_dht_setup();
     setupShiftRegister();
 
-    xTaskCreatePinnedToCore(doorSensorTask, "Door Sensor", 2048, NULL, 1, NULL, 1);
+    //xTaskCreatePinnedToCore(doorSensorTask, "Door Sensor", 2048, NULL, 1, NULL, 1);
     xTaskCreatePinnedToCore(task3, "Task3", 8000, NULL, 2, NULL, 1);
 }
 

@@ -1,8 +1,8 @@
 #include "./headers/mqtt_client.hpp"
 
-#define RED_1 GPIO_NUM_25
-#define GREEN_1 GPIO_NUM_33
-#define BLUE_1 GPIO_NUM_32
+#define RED_1 GPIO_NUM_27
+#define GREEN_1 GPIO_NUM_25
+#define BLUE_1 GPIO_NUM_33
 
 #define RED_2 GPIO_NUM_12
 #define GREEN_2 GPIO_NUM_13
