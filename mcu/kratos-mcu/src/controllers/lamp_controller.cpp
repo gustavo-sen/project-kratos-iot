@@ -1,7 +1,3 @@
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include "driver/gpio.h"
-#include <string>
 #include <ArduinoJson.h>
 
 #include "./headers/lamp_controller.hpp"

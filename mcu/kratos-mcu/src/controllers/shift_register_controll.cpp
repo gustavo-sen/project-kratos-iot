@@ -1,4 +1,3 @@
-#include <Arduino.h>
 #include "driver/gpio.h"
 #include "headers/shift_register_controller.hpp"
 

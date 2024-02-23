@@ -1,6 +1,7 @@
 #include "driver/gpio.h"
-#include "./headers/mqtt_client.hpp"
 #include <string>
+
+#include "./headers/mqtt_client.hpp"
 #include "./headers/door_sensor.hpp"
 
 DoorStruct doorSensor1;

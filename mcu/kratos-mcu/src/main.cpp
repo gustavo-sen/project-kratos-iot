@@ -1,6 +1,5 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include "driver/gpio.h"
 
 #include "headers/wifi_setup.hpp"
 #include "./headers/door_sensor.hpp"

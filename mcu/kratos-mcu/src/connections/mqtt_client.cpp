@@ -1,4 +1,3 @@
-#include <string.h>
 #include <string>
 #include <type_traits>
 
