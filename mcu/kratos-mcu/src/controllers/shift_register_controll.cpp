@@ -1,9 +1,9 @@
 #include "driver/gpio.h"
 #include "headers/shift_register_controller.hpp"
 
-#define LATCH_PIN GPIO_NUM_18  // Pino ST_CP (RCLK) conectado ao pino 12 do 74HC595
-#define CLOCK_PIN GPIO_NUM_23  // Pino SH_CP (SRCLK) conectado ao pino 11 do 74HC595
-#define DATA_PIN GPIO_NUM_5   // Pino DS (SER) conectado ao pino 14 do 74HC595 
+#define LATCH_PIN GPIO_NUM_18  // Pino ST_CP (RCLK)
+#define CLOCK_PIN GPIO_NUM_23  // Pino SH_CP (SRCLK)
+#define DATA_PIN GPIO_NUM_5   // Pino DS (SER)
 
 u_int8_t register_o = 0;
 

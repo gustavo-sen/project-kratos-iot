@@ -19,15 +19,16 @@ void setup() {
     mqtt_setup();  
 
     setup_lamp();  
-    setup_door_sensor();
     set_up_lockers();
     fan_setup();
     rgb_setup();
-    sensor_dht_setup();
     setupShiftRegister();
 
-    //xTaskCreatePinnedToCore(doorSensorTask, "Door Sensor", 2048, NULL, 1, NULL, 1);
-    xTaskCreatePinnedToCore(task3, "Task3", 8000, NULL, 2, NULL, 1);
+    setup_door_sensor();
+    sensor_dht_setup();
+
+    xTaskCreatePinnedToCore(doorSensorTask, "Door Sensor", 2048, NULL, 1, NULL, 1);
+    xTaskCreatePinnedToCore(task3, "DHT", 8000, NULL, 2, NULL, 1);
 }
 
 void loop() {
@@ -36,9 +37,8 @@ void loop() {
 
 void doorSensorTask(void *pvParameters) {
     while (true) {
-        doorSensorStatus(doorSensor1);
-        doorSensorStatus(doorSensor2);
-        vTaskDelay(pdMS_TO_TICKS(4000));
+        update_door_sensor();
+        vTaskDelay(pdMS_TO_TICKS(1500));
     }
 }
 

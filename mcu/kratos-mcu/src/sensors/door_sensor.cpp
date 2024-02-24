@@ -12,24 +12,30 @@ void setup_door_sensor(){
     doorSensor1.gpio = GPIO_NUM_34;
     doorSensor1.name = "porta_1";
 
-    doorSensor2.gpio = GPIO_NUM_35;
     doorSensor2.lastStatus = true;
+    doorSensor2.gpio = GPIO_NUM_35;
     doorSensor2.name = "porta_2";
 
-    gpio_set_direction(doorSensor1.gpio, GPIO_MODE_INPUT);
-    gpio_set_direction(doorSensor2.gpio, GPIO_MODE_INPUT);
+    pinMode(doorSensor1.gpio, INPUT_PULLUP);
+    pinMode(doorSensor2.gpio, INPUT_PULLUP);
+
 }
 
-void doorSensorStatus(DoorStruct door){
-    bool status = !gpio_get_level((gpio_num_t) door.gpio);
+void update_door_sensor(){
+    doorSensorStatus(&doorSensor1);
+    doorSensorStatus(&doorSensor2);
+}
 
-    if(status != door.lastStatus){
+void doorSensorStatus(DoorStruct *door){
+    bool status = !gpio_get_level(door->gpio);
+    
+    if(status != door->lastStatus){
         std::string opc = (status ? "open" : "closed");
-        std::string message = "Door " + door.name + " was " + opc;
-        std::string topic = "home/sensor/door/" + door.name;
+        std::string message = "Door " + door->name + " is now " + opc;
+        std::string topic = "home/sensor/door/" + door->name;
         
-        door.lastStatus = status;
         mqtt_publish(topic.c_str(), message.c_str());
+        door->lastStatus = status;
     }
 }
 

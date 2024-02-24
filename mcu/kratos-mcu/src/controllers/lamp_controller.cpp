@@ -4,7 +4,7 @@
 #include "./headers/mqtt_client.hpp"
 #include "./headers/shift_register_controller.hpp"
 
-const REG_XOS lampsPort[] = {REG_XO_1,REG_XO_2,REG_XO_3,REG_XO_4,REG_XO_5,REG_XO_6};
+const REG_XOS lampsPort[] = {REG_XO_0,REG_XO_1,REG_XO_2,REG_XO_3,REG_XO_4,REG_XO_5};
 
 void setup_lamp(){
     mqtt_subcribe("lamp");
