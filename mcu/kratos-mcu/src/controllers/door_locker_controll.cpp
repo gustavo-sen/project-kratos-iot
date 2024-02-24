@@ -10,16 +10,21 @@ void set_up_lockers(){
 
 void update_door_lock(std::string& packetStr){
     JsonDocument doc;
-    DeserializationError error = deserializeJson(doc, packetStr);
+    deserializeJson(doc, packetStr);
 
-    int lockNumber = doc["lockNumber"];
+    uint8_t lockNumber = doc["lockNumber"];
     std::string lockName = doc["lockName"];
     bool isLock = doc["isLock"];
 
-    if(lockNumber == 0){
-        setBit(REG_XO_6, isLock);
-    }else{
-        setBit(REG_XO_7, isLock);
+    switch (lockNumber){
+        case 0:
+            setBit(REG_XO_6, isLock);
+            break;
+        case 1:
+            setBit(REG_XO_7, isLock);
+            break;
+        default:
+            break;
     }
 
     std::string message = "Lock " + lockName + " was " + (isLock ? "closed" : "open");

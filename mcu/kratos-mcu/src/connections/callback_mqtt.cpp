@@ -18,8 +18,10 @@ void update(char* topic, std::string packageTemp){
         update_door_lock(packageTemp);
 
     }else if(strcmp(topic, "home/ligth/rgb") == 0){
-        ArduinoJson::JsonDocument jsonDoc;
+        JsonDocument jsonDoc;
+        
         DeserializationError error = deserializeJson(jsonDoc, packageTemp);
+        
         if(!error){
             uint8_t index = jsonDoc["index"];
         

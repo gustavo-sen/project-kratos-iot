@@ -22,7 +22,7 @@ void updateSensorDHT(){
     dht.temperature().getEvent(&temp_event);
     dht.humidity().getEvent(&humidity_event);
 
-    ArduinoJson::JsonDocument doc;
+    JsonDocument doc;
     std::string jsonString;
 
     if (!isnan(temp_event.temperature) && !isnan(humidity_event.temperature)) {        

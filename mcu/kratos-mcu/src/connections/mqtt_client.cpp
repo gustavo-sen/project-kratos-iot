@@ -73,7 +73,7 @@ void mqttConnect() {
     while (!client.connected()){
         if (client.connect(CLIENT_ID, MQTT_USER, MQTT_PASS)) {
         } else {
-            vTaskDelay(2000 / portTICK_RATE_MS);
+            vTaskDelay(1000 / portTICK_RATE_MS);
         }
     }
 }

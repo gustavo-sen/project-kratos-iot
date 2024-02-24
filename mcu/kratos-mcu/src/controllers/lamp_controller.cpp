@@ -13,11 +13,7 @@ void setup_lamp(){
 void lamp_update(std::string& packetStr, const char& lampNum){ 
 
     JsonDocument doc;
-    DeserializationError error = deserializeJson(doc, packetStr);
-
-    if (error) {
-        return;
-    }
+    deserializeJson(doc, packetStr);
 
     int lampNumber = doc["lampNumber"];
     bool isOn = doc["isOn"];

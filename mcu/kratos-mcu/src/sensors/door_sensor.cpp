@@ -8,17 +8,17 @@ DoorStruct doorSensor1;
 DoorStruct doorSensor2;
 
 void setup_door_sensor(){
-    doorSensor1.lastStatus = true;
     doorSensor1.gpio = 34;
     doorSensor1.name = "porta_1";
 
-    doorSensor2.lastStatus = true;
     doorSensor2.gpio = 35;
     doorSensor2.name = "porta_2";
 
-    pinMode(doorSensor1.gpio, INPUT_PULLUP);
-    pinMode(doorSensor2.gpio, INPUT_PULLUP);
+    pinMode(doorSensor1.gpio, INPUT);
+    pinMode(doorSensor2.gpio, INPUT);
 
+    doorSensor1.lastStatus = digitalRead(doorSensor1.gpio);
+    doorSensor2.lastStatus = digitalRead(doorSensor2.gpio);
 }
 
 void update_door_sensor(){

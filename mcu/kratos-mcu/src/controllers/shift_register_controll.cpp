@@ -24,8 +24,8 @@ void setBit(REG_XOS bitIndex, bool value) {
 void updateShiftRegister(){
   gpio_set_level(LATCH_PIN, 0);
 
-  for(u_int8_t i = 0; i < 8; i++){
-    gpio_set_level(DATA_PIN, !!(register_o & (1 << (7 - i))));
+  for(int8_t i = 7; i >= 0; i--){
+    gpio_set_level(DATA_PIN, (register_o >> i) & 1);
     gpio_set_level(CLOCK_PIN, 1);
     gpio_set_level(CLOCK_PIN, 0);
   }
