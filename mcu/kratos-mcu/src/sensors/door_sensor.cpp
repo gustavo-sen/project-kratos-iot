@@ -9,11 +9,11 @@ DoorStruct doorSensor2;
 
 void setup_door_sensor(){
     doorSensor1.lastStatus = true;
-    doorSensor1.gpio = GPIO_NUM_34;
+    doorSensor1.gpio = 34;
     doorSensor1.name = "porta_1";
 
     doorSensor2.lastStatus = true;
-    doorSensor2.gpio = GPIO_NUM_35;
+    doorSensor2.gpio = 35;
     doorSensor2.name = "porta_2";
 
     pinMode(doorSensor1.gpio, INPUT_PULLUP);
@@ -27,7 +27,7 @@ void update_door_sensor(){
 }
 
 void doorSensorStatus(DoorStruct *door){
-    bool status = !gpio_get_level(door->gpio);
+    bool status = !digitalRead(door->gpio);
     
     if(status != door->lastStatus){
         std::string opc = (status ? "open" : "closed");

@@ -38,7 +38,7 @@ void loop() {
 void doorSensorTask(void *pvParameters) {
     while (true) {
         update_door_sensor();
-        vTaskDelay(pdMS_TO_TICKS(1500));
+        vTaskDelay(pdMS_TO_TICKS(2000));
     }
 }
 

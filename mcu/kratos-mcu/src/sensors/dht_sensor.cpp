@@ -7,7 +7,7 @@
 #include "./headers/mqtt_client.hpp"
 
 #define DHTPIN 4
-#define DHTTYPE DHT22
+#define DHTTYPE DHT11
 
 DHT_Unified dht(DHTPIN, DHTTYPE);
 

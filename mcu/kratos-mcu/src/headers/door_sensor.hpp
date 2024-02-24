@@ -4,7 +4,7 @@
 
 struct DoorStruct{
     bool lastStatus;
-    gpio_num_t gpio;
+    int gpio;
     std::string name;
 };
 
