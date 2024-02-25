@@ -1,9 +1,9 @@
 #include "driver/gpio.h"
 #include "headers/shift_register_controller.hpp"
 
-#define LATCH_PIN GPIO_NUM_18  // Pino ST_CP (RCLK)
-#define CLOCK_PIN GPIO_NUM_23  // Pino SH_CP (SRCLK)
-#define DATA_PIN GPIO_NUM_5   // Pino DS (SER)
+#define LATCH_PIN GPIO_NUM_18  //ST_CP (RCLK)
+#define CLOCK_PIN GPIO_NUM_23  //SH_CP (SRCLK)
+#define DATA_PIN GPIO_NUM_5   //DS (SER)
 
 u_int8_t register_o = 0;
 

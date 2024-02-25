@@ -1,8 +1,8 @@
 #include "./headers/wifi_setup.hpp"
 #include <WiFi.h>
 
-//char ssid[] = "VORTEX";
-//char password[] = "pprKN@Fv";
+// char ssid[] = "VORTEX";
+// char password[] = "pprKN@Fv";
 char ssid[] = "Home";
 char password[] = "ioyjq89652";
 
